@@ -36,19 +36,20 @@ export class VnpayService {
 
     const vnpParams = {
       vnp_Version: '2.1.0',
-      vnp_Command: 'billpayment',
+      vnp_Command: 'pay',
       vnp_TmnCode: vnpTmnCode,
       vnp_Locale: 'vn',
       vnp_CurrCode: 'VND',
       vnp_TxnRef: orderId,
-      vnp_OrderType: 'other',
-      vnp_Amount: orderInfo.amount * 100,
+
+      vnp_Amount: 5000 * 100,
       vnp_OrderInfo: `ThanhtoanchomaGD:${orderId}`,
+      vnp_OrderType: 'other',
       vnp_ReturnUrl: vnpReturnUrl,
       vnp_IpAddr: '127.0.0.1',
-      vnp_BankCode: 'NCB',
-      vnp_CreateDate: vnpExpireDate,
-      //vnp_ExpireDate: vnpExpireDate,
+      vnp_BankCode: 'VNBANK',
+      vnp_CreateDate: vnpCreateDate,
+      vnp_ExpireDate: vnpExpireDate,
     };
 
     // Sort parameters
