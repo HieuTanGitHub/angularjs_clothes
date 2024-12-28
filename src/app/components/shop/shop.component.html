@@ -1,0 +1,172 @@
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<div *ngIf="successMessage" class="notification">
+  <i class="fas fa-check-circle icon-success"></i>
+  <span>{{ successMessage }}</span>
+</div>
+
+<section class="">
+  <div class="container py-2 mt-5" style="max-width: 1200px;">
+
+    <!-- Customer Categories Section -->
+    <div class="row">
+      <div class="col-12">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <nav aria-label="Category navigation" class="d-flex">
+            <ul class="pagination mb-0">
+              <li class="page-item" [class.disabled]="!hasPrevCategory()">
+                <button class="page-link" (click)="prevCategoryPage()" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </button>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="col-12 col-md-4 mb-4" *ngFor="let category of paginatedCategories">
+            <figure class="product-style">
+              <img [src]="category.hinh" class="card-img-top custom-img" alt="{{ category.ten }}" />
+            </figure>
+            <figcaption>
+              <h5 class="card-title custom-title">{{ category.ten }}</h5>
+              <div class="item-price">
+                <a [routerLink]="['/product-category/' + category.id]">Xem Chi Tiết</a>
+              </div>
+            </figcaption>
+          </div>
+
+          <nav aria-label="Category navigation" class="d-flex">
+            <ul class="pagination mb-0">
+              <li class="page-item" [class.disabled]="!hasNextCategory()">
+                <button class="page-link" (click)="nextCategoryPage()" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+<section class="">
+  <div class="container py-2 mt-5" style="max-width: 1200px;">
+    <div class="row">
+      <!-- Bên lọc sản phẩm -->
+      <div class="col-lg-2 mb-4">
+        <div class="card">
+          <div class="card-header text-center">
+            <h5 class="mb-0">Lọc sản phẩm</h5>
+          </div>
+          <div class="card-body">
+            <div class="mb-3">
+              <label for="sortSelect" class="form-label">Sắp xếp theo</label>
+              <select id="sortSelect" class="form-select" (change)="sortProducts($event)">
+                <option value="" selected>Chọn cách sắp xếp</option>
+                <option value="asc">Giá thấp đến cao</option>
+                <option value="desc">Giá cao đến thấp</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="priceRangeSelect" class="form-label">Lọc theo khoảng giá</label>
+              <select
+                id="priceRangeSelect"
+                class="form-select"
+                [(ngModel)]="selectedPriceRange"
+                (change)="filterByPrice()"
+              >
+                <option value="" selected>Chọn khoảng giá</option>
+                <option *ngFor="let range of priceRanges" [value]="range.value">
+                  {{ range.label }}
+                </option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="productTypeSelect" class="form-label">Danh mục sản phẩm</label>
+              <select id="productTypeSelect" class="form-select" [(ngModel)]="selectedProductTypeId" (change)="applyFilters()">
+                <option value="" selected>Chọn loại sản phẩm</option>
+                <option *ngFor="let productType of productTypes" [value]="productType.id">{{ productType.ten }}</option>
+              </select>
+            </div>
+
+
+            <div class="mb-3">
+              <label for="categorySelect" class="form-label">Nhà sản xuất</label>
+              <select id="categorySelect" class="form-select" [(ngModel)]="selectedCategoryId" (change)="applyFilters()">
+                <option value="" selected>Chọn nhà sản xuất</option>
+                <option *ngFor="let category of categories" [value]="category.id">{{ category.ten }}</option>
+              </select>
+            </div>
+
+
+
+            <div class="mb-3">
+              <label for="searchInput" class="form-label">Tìm kiếm</label>
+              <input type="text" id="searchInput" [(ngModel)]="keyword" (input)="applyFilters()" class="form-control" placeholder="Tìm kiếm sản phẩm...">
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Bên hiển thị sản phẩm -->
+      <div class="col-lg-10 mb-4">
+        <section id="new-products" class="bookshelf pb-5 mb-5">
+          <div class="row">
+            <div class="inner-content">
+              <div class="product-list" data-aos="fade-up">
+                <div class="grid product-grid">
+                  <div class="col-12 col-md-6 col-lg-4 mb-4" *ngFor="let product of paginatedProducts" class="product-item">
+                    <figure class="product-style">
+                      <a [routerLink]="['/product-detail', product.id]" routerLinkActive="router-link-active">
+                        <img [src]="product.hinh" alt="{{ product.ten }}" style="object-fit: cover; width: 100%; height: 200px;">
+                      </a>
+
+                      <!-- Thêm phần chọn kích cỡ -->
+                      <label for="size">Chọn kích cỡ:</label>
+                      <select [(ngModel)]="selectedSize[product.id]" id="size">
+                        <option *ngFor="let size of sizes" [value]="size">{{ size }}</option>
+                      </select>
+
+                      <button type="button" class="add-to-cart" (click)="addToCart(product)">Thêm vào giỏ hàng</button>
+                    </figure>
+                    <figcaption>
+                      <b>{{ product.ten }}</b><br>
+                      <span>Lượt xem: {{ product.xem || 0 }}</span>
+                      <div class="item-price">
+                        <span class="prev-price">{{ product.gia | currency:'VND':'symbol' }}</span>
+                        <span class="current-price">{{ product.gia_km | currency:'VND':'symbol' }}</span>
+                      </div>
+                    </figcaption>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phân trang sản phẩm -->
+          <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+              <li class="page-item" [class.disabled]="currentPage === 1">
+                <button class="page-link" (click)="changePage(currentPage - 1)" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </button>
+              </li>
+              <li class="page-item" *ngFor="let page of [].constructor(totalPages); let i = index">
+                <button class="page-link" (click)="changePage(i + 1)" [class.active]="currentPage === i + 1">{{ i + 1 }}</button>
+              </li>
+              <li class="page-item" [class.disabled]="currentPage === totalPages">
+                <button class="page-link" (click)="changePage(currentPage + 1)" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>

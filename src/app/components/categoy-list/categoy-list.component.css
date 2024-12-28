@@ -1,0 +1,29 @@
+.table th, .table td {
+  vertical-align: middle; /* Căn giữa theo chiều dọc */
+  padding: 0.75rem; /* Padding cho thẻ <th> và <td> */
+}
+.table {
+  width: 100%; /* Đảm bảo bảng chiếm toàn bộ chiều rộng của chứa */
+  margin-bottom: 1rem; /* Khoảng cách dưới bảng */
+  color: #212529; /* Màu chữ */
+}
+
+.table th {
+  background-color: #f8f9fa; /* Màu nền cho thẻ <th> */
+  color: #495057; /* Màu chữ cho thẻ <th> */
+  text-align: left; /* Căn trái nội dung */
+}
+
+.table td {
+  border-top: 1px solid #dee2e6; /* Đường viền trên cho thẻ <td> */
+}
+
+.table tr:hover {
+  background-color: #f1f1f1; /* Màu nền khi hover */
+}
+.table img {
+  width: 100px; /* Thay đổi kích thước hình ảnh */
+  height: auto; /* Đảm bảo tỷ lệ giữ nguyên không bị méo */
+  border-radius: 4px; /* Để hình ảnh có góc cạnh mềm mại */
+  object-fit: cover; /* Cắt hình ảnh để giữ nguyên tỷ lệ và không bị méo */
+}

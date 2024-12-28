@@ -1,0 +1,161 @@
+/* Cài đặt font chữ tổng thể */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9; /* Màu nền nhẹ cho toàn bộ trang */
+  color: #333; /* Màu chữ chính */
+}
+
+/* Cài đặt cho tiêu đề sản phẩm */
+h1.h1 {
+  font-size: 2.5rem; /* Kích thước tiêu đề */
+  font-weight: bold;
+  color: #333; /* Màu tối cho tiêu đề */
+  margin-bottom: 30px; /* Khoảng cách dưới tiêu đề */
+}
+
+/* Card sản phẩm */
+.card {
+  transition: transform 0.3s, box-shadow 0.3s; /* Hiệu ứng chuyển động mượt mà */
+  border: none; /* Bỏ viền mặc định */
+  border-radius: 10px; /* Bo góc cho card */
+  overflow: hidden; /* Ẩn phần thừa */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Nâng nhẹ khi hover */
+  box-shadow: 0px 12px 40px rgba(0, 0, 0, 0.15); /* Đổ bóng rõ nét hơn khi hover */
+}
+
+/* Tiêu đề sản phẩm */
+.product-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.product-title:hover {
+  color: #0056b3; /* Màu khi hover */
+}
+
+/* Giá sản phẩm */
+.text-danger {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.text-muted {
+  font-size: 1rem;
+  color: #6c757d; /* Màu chữ cho giá cũ */
+  /* Gạch ngang giá cũ đã bị xóa */
+}
+
+/* Nút thêm vào giỏ hàng */
+.btn.btn-primary {
+  background-color: #007bff; /* Màu nền nút */
+  border: none; /* Bỏ viền mặc định */
+  transition: background-color 0.3s, transform 0.2s; /* Hiệu ứng chuyển màu */
+  border-radius: 5px; /* Bo góc cho nút */
+}
+
+.btn.btn-primary:hover {
+  background-color: #0056b3; /* Màu khi hover */
+  transform: scale(1.05); /* Tăng kích thước nhẹ khi hover */
+}
+
+/* Hình ảnh sản phẩm */
+.product-img {
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+  border-radius: 10px 10px 0 0; /* Bo góc cho hình ảnh */
+}
+
+/* Thông báo thành công */
+.notification {
+  position: fixed; /* Để thông báo cố định trên màn hình */
+  top: 20px; /* Khoảng cách từ trên cùng */
+  right: 20px; /* Khoảng cách từ cạnh phải */
+  background-color: #dff0d8; /* Màu nền */
+  color: #3c763d; /* Màu chữ */
+  padding: 15px;
+  border: 1px solid #d6e9c6;
+  border-radius: 5px;
+  z-index: 1000; /* Để thông báo phủ lên các phần tử khác */
+  display: flex; /* Để hiển thị icon và văn bản cạnh nhau */
+  align-items: center;
+  max-width: 300px; /* Chiều rộng tối đa */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Đổ bóng để tạo độ nổi */
+}
+
+/* Icon thành công */
+.icon-success {
+  margin-right: 10px; /* Khoảng cách giữa icon và văn bản */
+  color: #5cb85c; /* Màu cho icon thành công */
+  font-size: 20px; /* Kích thước icon */
+}
+
+/* Phân trang */
+.pagination {
+  margin-top: 30px; /* Khoảng cách trên */
+}
+
+.page-item .page-link {
+  color: #007bff; /* Màu chữ cho trang */
+  padding: 0.5rem 1rem; /* Padding cho nút */
+  border-radius: 0.25rem; /* Bo góc cho nút */
+  transition: background-color 0.2
+}
+/* Phân trang tiếp tục */
+.page-item .page-link:hover {
+  background-color: rgba(0, 123, 255, 0.1); /* Hiệu ứng hover cho nút */
+}
+
+/* Cài đặt cho thông báo khi không có sản phẩm */
+.text-danger {
+  font-weight: bold; /* Làm nổi bật thông báo hết hàng */
+  font-size: 1.5rem; /* Kích thước chữ lớn hơn */
+}
+
+/* Cài đặt cho các phần tử trong card */
+.card-body {
+  padding: 1.5rem; /* Padding cho body của card */
+}
+
+/* Cài đặt cho tiêu đề trong card */
+.card-body .h5 {
+  font-size: 1.25rem; /* Kích thước tiêu đề trong card */
+  margin-bottom: 0.5rem; /* Khoảng cách dưới tiêu đề */
+}
+
+/* Cài đặt cho danh sách sản phẩm */
+.product-list {
+  display: flex; /* Sử dụng flexbox để sắp xếp sản phẩm */
+  flex-wrap: wrap; /* Cho phép sản phẩm xuống dòng */
+  justify-content: center; /* Căn giữa sản phẩm */
+}
+
+/* Cài đặt cho các card trong danh sách sản phẩm */
+.product-card {
+  margin: 1rem; /* Khoảng cách giữa các card */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .product-card {
+    flex: 0 0 100%; /* Chiếm toàn bộ chiều rộng trên màn hình nhỏ */
+  }
+}
+
+@media (min-width: 768px) {
+  .product-card {
+    flex: 0 0 48%; /* Chiếm 48% chiều rộng trên màn hình lớn */
+  }
+}
+
+@media (min-width: 992px) {
+  .product-card {
+    flex: 0 0 30%; /* Chiếm 30% chiều rộng trên màn hình rất lớn */
+  }
+}

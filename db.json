@@ -1,0 +1,1749 @@
+{
+  "nha_sx": [
+    {
+      "id": "1",
+      "ten": "Adidas",
+      "thu_tu": "1",
+      "an_hien": "1",
+      "hinh": "assets/img/5.png"
+    },
+    {
+      "id": "2",
+      "ten": "Nike",
+      "thu_tu": "2",
+      "an_hien": "1",
+      "hinh": "assets/img/6.png"
+    },
+    {
+      "id": "3",
+      "ten": "Acis",
+      "thu_tu": "3",
+      "an_hien": "1",
+      "hinh": "assets/img/7.png"
+    },
+    {
+      "id": "4",
+      "ten": "MLB",
+      "thu_tu": "4",
+      "an_hien": "1",
+      "hinh": "assets/img/8.png"
+    },
+    {
+      "id": "5",
+      "ten": "NewEra",
+      "thu_tu": "5",
+      "an_hien": "1",
+      "hinh": "assets/img/9.png"
+    },
+    {
+      "id": "6",
+      "ten": "Diceo",
+      "thu_tu": "6",
+      "an_hien": "1",
+      "hinh": "assets/img/10.png"
+    }
+  ],
+  "danh_muc": [
+    {
+      "id": "1",
+      "ten": "Giày Sneaker",
+      "thu_tu": "1",
+      "an_hien": "1",
+      "hinh": "assets/img/5.png"
+    },
+    {
+      "id": "2",
+      "ten": "Áo",
+      "thu_tu": "2",
+      "an_hien": "1",
+      "hinh": "assets/img/6.png"
+    },
+    {
+      "id": "3",
+      "ten": "Quần",
+      "thu_tu": "3",
+      "an_hien": "1",
+      "hinh": "assets/img/7.png"
+    }
+  ],
+  "san_pham": [
+    {
+      "id": "1",
+      "id_nhasx": "1",
+      "id_danhmuc": "1",
+      "ten": "Giày Adidas chính hãng - Advantage Base nữ",
+      "gia": "2000000",
+      "gia_km": "1200000",
+      "hinh": "https://bizweb.dktcdn.net/thumb/1024x1024/100/347/092/products/93440f41eb2941b4891cab0a0053b1.jpg?v=1729181469433",
+      "ngay": "2022-07-11",
+      "xem": 115,
+      "hot": "0",
+      "an_hien": "1",
+      "mo_ta": "Với thiết kế tinh tế và thời trang, giày Adidas Advantage Base nữ mang lại cảm giác thoải mái cả ngày. Được làm từ chất liệu cao cấp, sản phẩm thích hợp cho cả đi làm và dạo phố. Phần đế êm ái và chống trượt giúp bạn di chuyển linh hoạt trên mọi địa hình."
+    },
+    {
+      "id": "2",
+      "id_nhasx": "1",
+      "id_danhmuc": "1",
+      "ten": "Giày Adidas Nam Nữ Chính Hãng - Hoops 3.0",
+      "gia": "2200000",
+      "gia_km": "1180000",
+      "hinh": "https://bizweb.dktcdn.net/thumb/1024x1024/100/347/092/products/giay-adidas-3-0-low-classic-vintage-gy5434-01.jpg",
+      "ngay": "2022-07-11",
+      "xem": 91,
+      "hot": "0",
+      "an_hien": "1",
+      "mo_ta": "Hoops 3.0 là mẫu giày thể thao mang phong cách retro cổ điển, hoàn hảo cho các tín đồ thời trang. Với phần đệm êm ái, chất liệu bền bỉ, và thiết kế thời thượng, đây là lựa chọn lý tưởng cho các hoạt động hàng ngày."
+    },
+    {
+      "id": "3",
+      "id_nhasx": "2",
+      "id_danhmuc": "1",
+      "ten": "Giày Nike Nam Chính Hãng - Nike Air Force 1",
+      "gia": "4100000",
+      "gia_km": "2650000",
+      "hinh": "https://bizweb.dktcdn.net/thumb/1024x1024/100/347/092/products/giay-nike-air-force-1-07-fq4296-101-01.jpg",
+      "ngay": "2024-07-11",
+      "xem": 91,
+      "hot": "0",
+      "an_hien": "1",
+      "mo_ta": "Nike Air Force 1 là biểu tượng của phong cách thời trang đường phố, kết hợp giữa vẻ ngoài mạnh mẽ và độ bền tuyệt vời. Với lớp đệm mềm mại và thiết kế độc đáo, đôi giày này không chỉ thời trang mà còn hỗ trợ tối ưu cho bàn chân."
+    },
+    {
+      "id": "6",
+      "id_nhasx": "2",
+      "id_danhmuc": "1",
+      "ten": "Giày Nike Air Max 270 React ENG",
+      "gia": "4500000",
+      "gia_km": "3200000",
+      "hinh": "https://sneakerdaily.vn/wp-content/uploads/2021/07/giay-nike-air-max-270-react-eng-photon-dust-cj0579-002-1.jpg",
+      "ngay": "2023-01-15",
+      "xem": 76,
+      "hot": "0",
+      "an_hien": "1",
+      "mo_ta": "Giày Nike Air Max 270 React ENG mang đến phong cách hiện đại với thiết kế độc đáo và công nghệ đệm khí tối ưu. Với chất liệu thoáng khí và đế giày linh hoạt, sản phẩm này mang lại sự thoải mái và phong cách cho người sử dụng."
+    },
+    {
+      "id": "4",
+      "id_nhasx": "1",
+      "id_danhmuc": "1",
+      "ten": "Giày Adidas Stan Smith Fairway M20324",
+      "gia": "2300000",
+      "gia_km": "2100000",
+      "hinh": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/4edaa6d5b65a40d19f20a7fa00ea641f_9366/Giay_Stan_Smith_trang_M20325_01_standard.jpg",
+      "ngay": "2022-07-11",
+      "xem": 222,
+      "hot": "0",
+      "an_hien": "1",
+      "mo_ta": "Giày Adidas Stan Smith Fairway M20324 là sự kết hợp hoàn hảo giữa phong cách cổ điển và hiện đại. Với thiết kế tinh tế, chất liệu da cao cấp, và màu trắng chủ đạo, đôi giày này mang lại sự sang trọng và thanh lịch. Đặc điểm nổi bật là đế giày cao su chống trượt và lớp lót êm ái, tạo cảm giác thoải mái suốt cả ngày."
+    },
+    {
+      "id": "5",
+      "id_nhasx": "1",
+      "id_danhmuc": "1",
+      "ten": "Giày Adidas Superstar OG Vintage White C77124",
+      "gia": "2500000",
+      "gia_km": "2100000",
+      "hinh": "https://bizweb.dktcdn.net/100/446/588/products/giayadidasnamsuperstarc7712411.jpg?v=1675315152807",
+      "ngay": "2022-07-11",
+      "xem": "87",
+      "hot": "0",
+      "an_hien": "1",
+      "mo_ta": "Giày Adidas Superstar OG Vintage White C77124 mang phong cách cổ điển với đường nét thiết kế vượt thời gian. Phần da cao cấp và đế cao su bền bỉ giúp sản phẩm trở nên hoàn hảo cho các tín đồ thời trang đường phố."
+    },
+    {
+      "id": "7",
+      "id_nhasx": "3",
+      "id_danhmuc": "1",
+      "ten": "Giày Acis Gel-Kayano 28",
+      "gia": "3900000",
+      "gia_km": "2800000",
+      "hinh": "https://sneakerdaily.vn/wp-content/uploads/2023/09/Giay-ASICS-GEL-KAYANO-28-PLATINUM-Mens-Running-1011B291.020.jpg",
+      "ngay": "2023-06-10",
+      "xem": 102,
+      "hot": "1",
+      "an_hien": "1",
+      "mo_ta": "Giày Acis Gel-Kayano 28 là lựa chọn tối ưu cho người chạy bộ chuyên nghiệp. Với công nghệ đệm GEL độc quyền, sản phẩm mang lại sự thoải mái và hỗ trợ vượt trội trên mọi cung đường."
+    },
+    {
+      "id": "8",
+      "id_nhasx": "4",
+      "id_danhmuc": "2",
+      "ten": "Áo MLB Big Logo New York Yankees",
+      "gia": "1500000",
+      "gia_km": "1200000",
+      "hinh": "https://bizweb.dktcdn.net/100/446/974/products/ao-thun-mlb-chinh-hang-big-logo-ny-mau-den-3atsb1843-50bks-2.jpg?v=1710344153397",
+      "ngay": "2023-03-25",
+      "xem": 50,
+      "hot": "0",
+      "an_hien": "1",
+      "mo_ta": "Áo MLB Big Logo New York Yankees mang phong cách thể thao và cá tính với logo lớn in nổi bật. Chất liệu cao cấp, mềm mại, mang lại cảm giác thoải mái suốt cả ngày."
+    },
+    {
+      "id": "9",
+      "id_nhasx": "5",
+      "id_danhmuc": "2",
+      "ten": "Áo NewEra Essential Tee",
+      "gia": "1100000",
+      "gia_km": "950000",
+      "hinh": "https://bizweb.dktcdn.net/100/446/974/products/ao-thun-mlb-new-era-basic-new-york-yankees-black-13731451-1.jpg?v=1692358155763",
+      "ngay": "2023-07-01",
+      "xem": 63,
+      "hot": "1",
+      "an_hien": "1",
+      "mo_ta": "Áo NewEra Essential Tee là sự lựa chọn hoàn hảo cho phong cách thời trang tối giản. Với thiết kế đơn giản và chất liệu bền đẹp, sản phẩm phù hợp với mọi dịp sử dụng."
+    },
+    {
+      "id": "10",
+      "id_nhasx": "6",
+      "id_danhmuc": "3",
+      "ten": "Quần Diceo Jogger Pants",
+      "gia": "900000",
+      "gia_km": "800000",
+      "hinh": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP0TpOeW_GMVVvJor5B_3i_5anV1zo_6T_iQ&s",
+      "ngay": "2023-02-28",
+      "xem": 45,
+      "hot": "0",
+      "an_hien": "1",
+      "mo_ta": "Quần Diceo Jogger Pants mang lại sự thoải mái và phong cách trẻ trung với chất liệu mềm mại. Thiết kế jogger hiện đại dễ dàng phối hợp với nhiều loại trang phục khác nhau."
+    },
+    {
+      "id": "11",
+      "id_nhasx": "2",
+      "id_danhmuc": "1",
+      "ten": "Giày Nike Jordan 1 Retro High OG",
+      "gia": "5600000",
+      "gia_km": "4500000",
+      "hinh": "https://shopgiayreplica.com/wp-content/uploads/2019/07/Nike-Air-Jordan-1-Retro-High-Og-Bred-Toe-replica-800x650.jpg",
+      "ngay": "2024-05-10",
+      "xem": 190,
+      "hot": "1",
+      "an_hien": "1",
+      "mo_ta": "Giày Nike Jordan 1 Retro High OG được thiết kế với vẻ ngoài cổ điển và sang trọng. Đây là một biểu tượng trong thế giới sneaker, phù hợp cho cả những cuộc chơi thể thao lẫn các dịp lễ hội."
+    },
+    {
+      "id": "12",
+      "id_nhasx": "1",
+      "id_danhmuc": "1",
+      "ten": "Giày Adidas Ultraboost 21",
+      "gia": "4000000",
+      "gia_km": "3200000",
+      "hinh": "https://bizweb.dktcdn.net/thumb/large/100/378/584/products/giay-adidas-ultraboost-fy0402-giayauthentic-1.jpg",
+      "ngay": "2024-01-20",
+      "xem": 81,
+      "hot": "0",
+      "an_hien": "1",
+      "mo_ta": "Giày Adidas Ultraboost 21 là sự kết hợp hoàn hảo giữa thiết kế hiện đại và tính năng vượt trội, mang lại trải nghiệm êm ái và nhẹ nhàng khi đi bộ hoặc chạy."
+    },
+    {
+      "id": "13",
+      "id_nhasx": "5",
+      "id_danhmuc": "2",
+      "ten": "Áo Hoodie NewEra Black",
+      "gia": "1800000",
+      "gia_km": "1500000",
+      "hinh": "https://bizweb.dktcdn.net/thumb/grande/100/413/756/products/image-1728027852604.png?v=1728027862127",
+      "ngay": "2023-11-25",
+      "xem": 95,
+      "hot": "1",
+      "an_hien": "1",
+      "mo_ta": "Áo Hoodie NewEra Black với thiết kế trẻ trung, phong cách, thích hợp để mặc trong mọi dịp. Chất liệu ấm áp và thoải mái giúp bạn giữ ấm trong mùa lạnh."
+    },
+    {
+      "id": "14",
+      "id_nhasx": "4",
+      "id_danhmuc": "2",
+      "ten": "Áo MLB Monogram Tee",
+      "gia": "1300000",
+      "gia_km": "1150000",
+      "hinh": "https://bizweb.dktcdn.net/thumb/1024x1024/100/410/787/products/53ecb66d-15ef-4a2b-966d-5b1432ff5219.jpg?v=1650858964317",
+      "ngay": "2024-04-10",
+      "xem": 45,
+      "hot": "0",
+      "an_hien": "1",
+      "mo_ta": "Áo MLB Monogram Tee rất thời trang với logo nổi bật, phù hợp cho những ai yêu thích phong cách thể thao. Chất liệu vải cao cấp mang lại cảm giác dễ chịu cho người mặc."
+    },
+    {
+      "id": "15",
+      "id_nhasx": "3",
+      "id_danhmuc": "3",
+      "ten": "Quần Acis Training Shorts",
+      "gia": "750000",
+      "gia_km": "650000",
+      "hinh": "https://bizweb.dktcdn.net/100/425/004/products/434758075-389800867156202-3525131519647684757-n-1712059085061.jpg?v=1712059089620",
+      "ngay": "2023-05-15",
+      "xem": 58,
+      "hot": "0",
+      "an_hien": "1",
+      "mo_ta": "Quần Acis Training Shorts có thiết kế thể thao, giúp bạn tự do vận động trong các hoạt động thể chất. Chất liệu nhẹ và thoáng khí giữ cho cơ thể luôn khô ráo."
+    },
+    {
+      "id": "16",
+      "id_nhasx": "1",
+      "id_danhmuc": "1",
+      "ten": "Giày Adidas Yeezy Boost 350 V2",
+      "gia": "6200000",
+      "gia_km": "5000000",
+      "hinh": "https://cdn.beeonline.vn/media/1/products/giay-sneaker/adidas/adidas-yeezy-350-v2-true-form/adidas-yeezy-350-v2-true-form-1-min.jpg",
+      "ngay": "2024-08-01",
+      "xem": 146,
+      "hot": "1",
+      "an_hien": "1",
+      "mo_ta": "Giày Adidas Yeezy Boost 350 V2 mang đến phong cách hiện đại với thiết kế độc đáo và chất liệu cao cấp. Là sự lựa chọn hoàn hảo cho những tín đồ yêu thích sneaker."
+    },
+    {
+      "id": "17",
+      "id_nhasx": "2",
+      "id_danhmuc": "1",
+      "ten": "Giày Nike ZoomX Vaporfly Next%",
+      "gia": "5400000",
+      "gia_km": "4200000",
+      "hinh": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ7fC_st8XGjo-pWSieesHjkKjKrIGdh-CYQ&s",
+      "ngay": "2023-12-10",
+      "xem": 110,
+      "hot": "1",
+      "an_hien": "1",
+      "mo_ta": "Giày Nike ZoomX Vaporfly Next% là mẫu giày chạy được thiết kế dành riêng cho vận động viên, với công nghệ tiên tiến giúp tăng tốc độ và hiệu suất khi thi đấu."
+    },
+    {
+      "id": "18",
+      "id_nhasx": "3",
+      "id_danhmuc": "1",
+      "ten": "Giày Acis Gel-Lyte III OG",
+      "gia": "3800000",
+      "gia_km": "2800000",
+      "hinh": "https://bizweb.dktcdn.net/100/424/874/products/1ce02bf5-a673-425e-aea3-17398b0ac3ba.jpg?v=1621914233187",
+      "ngay": "2023-09-10",
+      "xem": 101,
+      "hot": "1",
+      "an_hien": "1",
+      "mo_ta": "Giày Acis Gel-Lyte III OG là sự kết hợp hoàn hảo giữa phong cách và chức năng, với thiết kế mạnh mẽ và đế gel giúp giảm sốc khi di chuyển."
+    },
+    {
+      "id": "19",
+      "id_nhasx": "4",
+      "id_danhmuc": "2",
+      "ten": "Áo MLB Oversize Logo Tee",
+      "gia": "1400000",
+      "gia_km": "1200000",
+      "hinh": "https://bizweb.dktcdn.net/100/446/974/products/ao-mlb-classic-monogram-big-logo-short-sleeve-t-shirt-new-york-yankees-black-3atsm0233-50bks-3.jpg?v=1686635060437",
+      "ngay": "2024-03-10",
+      "xem": 77,
+      "hot": "0",
+      "an_hien": "1",
+      "mo_ta": "Áo MLB Oversize Logo Tee với thiết kế logo lớn, mang đến phong cách trẻ trung và năng động. Chất liệu thoáng mát, lý tưởng cho mùa hè."
+    },
+    {
+      "id": "20",
+      "id_nhasx": "5",
+      "id_danhmuc": "3",
+      "ten": "Quần Jogger NewEra Essential",
+      "gia": "1000000",
+      "gia_km": "850000",
+      "hinh": "https://ccauthentic.vn/uploads/products/a6a29b7800f81684e24c5f149d5b736e.jpg",
+      "ngay": "2023-11-20",
+      "xem": 60,
+      "hot": "0",
+      "an_hien": "1",
+      "mo_ta": "Quần Jogger NewEra Essential có thiết kế tiện lợi và kiểu dáng hiện đại, phù hợp cho các hoạt động thể thao hay dạo phố."
+    },
+    {
+      "id": "21",
+      "id_nhasx": "2",
+      "id_danhmuc": "1",
+      "ten": "Giày Nike Special Field Air Force 1",
+      "gia": "5000000",
+      "gia_km": "4000000",
+      "hinh": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShBZ4F44AKeCRhWtm47FD6pOXfiOnvymxtIg&s",
+      "ngay": "2024-09-01",
+      "xem": 50,
+      "hot": "1",
+      "an_hien": "1",
+      "mo_ta": "Giày Nike Special Field Air Force 1 mang lại phong cách mạnh mẽ với thiết kế cổ cao, phù hợp cho những tín đồ yêu thích sự khác biệt."
+    },
+    {
+      "id": "22",
+      "id_nhasx": "1",
+      "id_danhmuc": "2",
+      "ten": "Áo Adidas Originals Trefoil",
+      "gia": "1600000",
+      "gia_km": "1300000",
+      "hinh": "https://cdn.chiaki.vn/unsafe/0x480/left/top/smart/filters:quality(75)/https://chiaki.vn/upload/product/2022/07/ao-thun-ba-la-adidas-originals-trefoil-tee-h32312-62c7d0df3b0c8-08072022133823.jpg",
+      "ngay": "2024-08-20",
+      "xem": 35,
+      "hot": "0",
+      "an_hien": "1",
+      "mo_ta": "Áo Adidas Originals với logo Trefoil mang lại phong cách retro, dễ dàng phối hợp với nhiều loại trang phục khác nhau."
+    },
+    {
+      "id": "23",
+      "id_nhasx": "6",
+      "id_danhmuc": "3",
+      "ten": "Quần Shorts Diceo Slim Fit",
+      "gia": "850000",
+      "gia_km": "700000",
+      "hinh": "https://1557691689.e.cdneverest.net/fast/913x0/filters:format(webp)/static.5sfashion.vn/storage/product_color/merehBpasf6HplGeXLZ6flZ3LP3WsUxH.webp",
+      "ngay": "2024-07-15",
+      "xem": 70,
+      "hot": "0",
+      "an_hien": "1",
+      "mo_ta": "Quần Shorts Diceo Slim Fit thiết kế trẻ trung, chất liệu thoáng khí, thích hợp cho các hoạt động thể thao và dạo phố."
+    },
+    {
+      "id": "24",
+      "id_nhasx": "3",
+      "id_danhmuc": "1",
+      "ten": "Giày Acis Gel-Nimbus 23",
+      "gia": "4700000",
+      "gia_km": "3500000",
+      "hinh": "https://cdn.vuahanghieu.com/unsafe/0x900/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2023/04/giay-the-thao-asics-gel-kayano-29-extra-wide-1011b471-0024e-mau-den-xam-size-40-644211e019d8f-21042023113232.jpg",
+      "ngay": "2024-06-05",
+      "xem": 40,
+      "hot": "1",
+      "an_hien": "1",
+      "mo_ta": "Giày Acis Gel-Nimbus 23 là mẫu giày chạy bộ hoàn hảo với công nghệ đệm GEL, giúp giảm sốc và tạo sự thoải mái cho người chạy."
+    },
+    {
+      "id": "25",
+      "id_nhasx": "4",
+      "id_danhmuc": "2",
+      "ten": "Áo MLB Classic Hoodie",
+      "gia": "2000000",
+      "gia_km": "1700000",
+      "hinh": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-CvkojM-eYveaLdR6vQC0TcA-Z5vZ-U_SoA&s",
+      "ngay": "2024-05-25",
+      "xem": 60,
+      "hot": "0",
+      "an_hien": "1",
+      "mo_ta": "Áo MLB Classic Hoodie mang lại phong cách năng động và trẻ trung, chất liệu ấm áp và thoải mái cho mùa đông."
+    },
+    {
+      "id": "26",
+      "id_nhasx": "1",
+      "id_danhmuc": "1",
+      "ten": "Giày Adidas NMD R1",
+      "gia": "3500000",
+      "gia_km": "2900000",
+      "hinh": "https://bizweb.dktcdn.net/100/413/756/products/61tjlycssml-ac-ul1200.jpg?v=1626175044303",
+      "ngay": "2024-09-10",
+      "xem": 50,
+      "hot": "1",
+      "an_hien": "1",
+      "mo_ta": "Giày Adidas NMD R1 mang đến phong cách thời trang hiện đại, với thiết kế tối giản và công nghệ đệm êm ái."
+    },
+    {
+      "id": "27",
+      "id_nhasx": "2",
+      "id_danhmuc": "1",
+      "ten": "Giày Nike Air Max 90",
+      "gia": "3800000",
+      "gia_km": "2800000",
+      "hinh": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaL_4I9Gi6nZfaXIqXxcgHJqjSqh9-c9SBMA&s",
+      "ngay": "2024-08-15",
+      "xem": 60,
+      "hot": "1",
+      "an_hien": "1",
+      "mo_ta": "Giày Nike Air Max 90 với đệm khí cổ điển, mang lại cảm giác thoải mái và phong cách thanh lịch."
+    },
+    {
+      "id": "28",
+      "id_nhasx": "1",
+      "id_danhmuc": "2",
+      "ten": "Áo Adidas Essentials Logo Tee",
+      "gia": "1300000",
+      "gia_km": "1100000",
+      "hinh": "https://bizweb.dktcdn.net/100/401/610/products/adidasessentialslogoteegendern-8f23a3a6-880e-49b9-8295-765404783f6d.jpg?v=1711468679333",
+      "ngay": "2024-07-20",
+      "xem": 45,
+      "hot": "0",
+      "an_hien": "1",
+      "mo_ta": "Áo Adidas Essentials mang lại phong cách thanh lịch với logo nổi bật, dễ dàng phối đồ cho nhiều dịp khác nhau."
+    },
+    {
+      "id": "29",
+      "id_nhasx": "2",
+      "id_danhmuc": "3",
+      "ten": "Quần Nike Dri-FIT Training Pants",
+      "gia": "1200000",
+      "gia_km": "1000000",
+      "hinh": "https://sneakerdaily.vn/wp-content/uploads/2024/08/Quan-Nike-Men-Dri-Fit-Academy-23-Training-Pants-Black-DV9743-010.jpg",
+      "ngay": "2024-06-25",
+      "xem": 55,
+      "hot": "0",
+      "an_hien": "1",
+      "mo_ta": "Quần Nike Dri-FIT được thiết kế tối ưu cho luyện tập, với công nghệ thoát ẩm vượt trội và phong cách thể thao."
+    },
+    {
+      "id": "30",
+      "id_nhasx": "3",
+      "id_danhmuc": "1",
+      "ten": "Giày Acis Gel-Quantum 180",
+      "gia": "4100000",
+      "gia_km": "3000000",
+      "hinh": "https://www.jordan1.vn/wp-content/uploads/2023/09/image_-_2023-07-28t130848.745_798d50f93ca841ee9e08988fa2471523.png",
+      "ngay": "2024-05-30",
+      "xem": 70,
+      "hot": "1",
+      "an_hien": "1",
+      "mo_ta": "Giày Acis Gel-Quantum 180 mang đến độ bền cao và công nghệ đệm tuyệt vời cho mọi hoạt động thể thao."
+    },
+    {
+      "id": "31",
+      "id_nhasx": "4",
+      "id_danhmuc": "2",
+      "ten": "Áo MLB Classic Big Logo",
+      "gia": "1500000",
+      "gia_km": "1300000",
+      "hinh": "https://bizweb.dktcdn.net/thumb/grande/100/446/974/products/ao-mlb-classic-monogram-big-logo-short-sleeve-t-shirt-boston-red-sox-l-melange-grey-3atsm0233-43mgl-3.jpg?v=1686635060347",
+      "ngay": "2024-04-15",
+      "xem": 50,
+      "hot": "0",
+      "an_hien": "1",
+      "mo_ta": "Áo MLB Classic Big Logo mang lại vẻ đẹp trẻ trung, chất liệu thoáng mát rất lý tưởng cho mùa hè."
+    },
+    {
+      "id": "32",
+      "id_nhasx": "5",
+      "id_danhmuc": "3",
+      "ten": "Quần NewEra Essential Pants",
+      "gia": "950000",
+      "gia_km": "800000",
+      "hinh": "https://cdn-images.kiotviet.vn/littleusastore/84194cfd1b3043a4a2a779ecf4008175.png",
+      "ngay": "2024-03-10",
+      "xem": 65,
+      "hot": "0",
+      "an_hien": "1",
+      "mo_ta": "Quần NewEra Essential mang kiểu dáng hiện đại, chất liệu mềm mại, dễ phối hợp với nhiều trang phục."
+    },
+    {
+      "id": "33",
+      "id_nhasx": "1",
+      "id_danhmuc": "1",
+      "ten": "Giày Adidas Superstar Future",
+      "gia": "4000000",
+      "gia_km": "3200000",
+      "hinh": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/52c64d1f42944b7d8d60ad490071b34a_9366/Giay_Superstar_Futureshell_trang_H00197_01_standard.jpg",
+      "ngay": "2024-02-20",
+      "xem": 80,
+      "hot": "1",
+      "an_hien": "1",
+      "mo_ta": "Giày Adidas Superstar Future mang phong cách cổ điển, phối với mọi trang phục."
+    },
+    {
+      "id": "34",
+      "id_nhasx": "2",
+      "id_danhmuc": "2",
+      "ten": "Áo Nike Sportswear Element",
+      "gia": "1700000",
+      "gia_km": "1500000",
+      "hinh": "https://sneakerdaily.vn/wp-content/uploads/2024/01/Ao-Nike-Element-Repel-Therma-FIT-Mens-Thermal-Water-Repellent-Running-Top-FB8565-681.jpg",
+      "ngay": "2024-01-15",
+      "xem": 90,
+      "hot": "1",
+      "an_hien": "1",
+      "mo_ta": "Áo Nike Sportswear Element thiết kế thời trang và thoải mái, thích hợp cho mọi hoạt động."
+    },
+    {
+      "id": "35",
+      "id_nhasx": "3",
+      "id_danhmuc": "3",
+      "ten": "Quần Acis Flex Shorts",
+      "gia": "800000",
+      "gia_km": "700000",
+      "hinh": "https://www.mude-sports.com/wp-content/uploads/2022/02/11078-Side-Right.jpg",
+      "ngay": "2024-02-01",
+      "xem": 40,
+      "hot": "0",
+      "an_hien": "1",
+      "mo_ta": "Quần Acis Flex Shorts, thiết kế hiện đại với chất liệu thoáng khí, lý tưởng cho mùa hè."
+    },
+    {
+      "id": "36",
+      "id_nhasx": "4",
+      "id_danhmuc": "1",
+      "ten": "Giày MLB Retro Runner",
+      "gia": "4500000",
+      "gia_km": "3900000",
+      "hinh": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn7WPpp8X353yMmt3sBOOjTYBnfH_1jPefgQ&s",
+      "ngay": "2024-01-28",
+      "xem": 75,
+      "hot": "1",
+      "an_hien": "1",
+      "mo_ta": "Giày MLB Retro Runner, phong cách vintage kết hợp cùng sự thoải mái tốt nhất."
+    },
+    {
+      "id": "37",
+      "id_nhasx": "5",
+      "id_danhmuc": "2",
+      "ten": "Áo NewEra Core Classic Tee",
+      "gia": "1200000",
+      "gia_km": "900000",
+      "hinh": "https://cdn.vuahanghieu.com/unsafe/0x900/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2023/11/ao-phong-new-era-colorful-graduation-t-shirt-ma-u-xa-m-655d746937ab0-22112023102425.jpg",
+      "ngay": "2023-12-15",
+      "xem": 80,
+      "hot": "0",
+      "an_hien": "1",
+      "mo_ta": "Áo NewEra Core Classic Tee mang đến sự đơn giản và tinh tế, dễ dàng phối với nhiều trang phục."
+    },
+    {
+      "id": "38",
+      "id_nhasx": "1",
+      "id_danhmuc": "2",
+      "ten": "Áo Adidas Adicolor Classic",
+      "gia": "1400000",
+      "gia_km": "1200000",
+      "hinh": "https://bizweb.dktcdn.net/100/410/787/products/157-jpeg-1705655278998.jpg?v=1705655708367",
+      "ngay": "2023-11-30",
+      "xem": 65,
+      "hot": "1",
+      "an_hien": "1",
+      "mo_ta": "Áo Adidas Adicolor cổ điển với thiết kế đơn giản, chất liệu mềm mại thoáng khí."
+    },
+    {
+      "id": "39",
+      "id_nhasx": "2",
+      "id_danhmuc": "1",
+      "ten": "Giày Nike React Infinity Run",
+      "gia": "4900000",
+      "gia_km": "4300000",
+      "hinh": "https://bizweb.dktcdn.net/100/455/705/products/reactxx.jpg?v=1702960470063",
+      "ngay": "2023-11-01",
+      "xem": 60,
+      "hot": "1",
+      "an_hien": "1",
+      "mo_ta": "Giày Nike React Infinity Run mang lại cảm giác êm ái và chắc chắn cho những vận động viên lâu năm."
+    },
+    {
+      "id": "40",
+      "id_nhasx": "3",
+      "id_danhmuc": "3",
+      "ten": "Quần Acis Training Leggings",
+      "gia": "1100000",
+      "gia_km": "950000",
+      "hinh": "https://sneakerdaily.vn/wp-content/uploads/2024/04/Quan-adidas-Tailored-HIIT-Training-78-Leggings-Aurora-Black-IT9384.jpg",
+      "ngay": "2023-10-15",
+      "xem": 70,
+      "hot": "0",
+      "an_hien": "1",
+      "mo_ta": "Quần Acis Training Leggings với chất liệu co giãn cao, thiết kế giúp bạn thoải mái hoạt động thể thao."
+    },
+    {
+      "id": "41",
+      "id_nhasx": "4",
+      "id_danhmuc": "2",
+      "ten": "Áo MLB Classic Jersey",
+      "gia": "1600000",
+      "gia_km": "1400000",
+      "hinh": "https://product.hstatic.net/200000642007/product/07blp_3atsv1143_2_5e7346ce6862430b8669db6a69c2c014_23e0233108a744dfaf4e845838a5cd97_master.jpg",
+      "ngay": "2023-09-25",
+      "xem": 45,
+      "hot": "0",
+      "an_hien": "1",
+      "mo_ta": "Áo MLB Classic Jersey với kiểu dáng thể thao, thích hợp cho những buổi đi chơi hoặc tập thể dục."
+    },
+    {
+      "id": "42",
+      "id_nhasx": "5",
+      "id_danhmuc": "1",
+      "ten": "Giày NewEra Essential Sneakers",
+      "gia": "2600000",
+      "gia_km": "2200000",
+      "hinh": "https://kingshoes.vn/data/upload/media/fear-of-god-essentials-es03w19u-srlefag3wb-king-shoes-sneaker-real-hcm-4.jpg",
+      "ngay": "2023-08-10",
+      "xem": 90,
+      "hot": "1",
+      "an_hien": "1",
+      "mo_ta": "Giày NewEra Essential Sneakers mang lại sự thoải mái và thời trang cho người sử dụng."
+    },
+    {
+      "id": "43",
+      "id_nhasx": "1",
+      "id_danhmuc": "1",
+      "ten": "Giày Adidas Samba",
+      "gia": "3700000",
+      "gia_km": "3100000",
+      "hinh": "https://product.hstatic.net/200000581855/product/giay_adidas_samba_og_white_black_gum_b758068_985da8a8aa2a4662ac9857f9efd30238_master.jpg",
+      "ngay": "2023-07-25",
+      "xem": 75,
+      "hot": "0",
+      "an_hien": "1",
+      "mo_ta": "Giày Adidas Samba, một thiết kế kinh điển, hoàn hảo cho cả sử dụng hàng ngày và thể thao."
+    },
+    {
+      "id": "44",
+      "id_nhasx": "3",
+      "id_danhmuc": "2",
+      "ten": "Áo Acis Training Tee",
+      "gia": "1350000",
+      "gia_km": "1150000",
+      "hinh": "https://bizweb.dktcdn.net/thumb/1024x1024/100/347/092/products/asics-2031c218-401-01.jpg",
+      "ngay": "2023-06-17",
+      "xem": 82,
+      "hot": "0",
+      "an_hien": "1",
+      "mo_ta": "Áo Acis Training Tee với công nghệ thoát ẩm giúp bạn cảm thấy thoải mái trong mọi buổi tập."
+    },
+    {
+      "id": "45",
+      "id_nhasx": "2",
+      "id_danhmuc": "3",
+      "ten": "Quần Nike Flex Stride",
+      "gia": "1400000",
+      "gia_km": "1200000",
+      "hinh": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDitdxkNZJPSGujo8OkBXrflxXESbuo901Tw&s",
+      "ngay": "2023-05-10",
+      "xem": 95,
+      "hot": "1",
+      "an_hien": "1",
+      "mo_ta": "Quần Nike Flex Stride có thiết kế linh hoạt, tạo sự thoải mái khi vận động và tập luyện."
+    },
+    {
+      "id": "46",
+      "id_nhasx": "5",
+      "id_danhmuc": "1",
+      "ten": "Giày NewEra Retro Sneakers",
+      "gia": "2900000",
+      "gia_km": "2500000",
+      "hinh": "https://product.hstatic.net/1000150581/product/9224b8823-2__2__9ec77a91aab84f1886e14f5e874f109b_6b9fa319b6d342ada084bd60848a462e_1024x1024.jpg",
+      "ngay": "2023-04-15",
+      "xem": 50,
+      "hot": "0",
+      "an_hien": "1",
+      "mo_ta": "Giày NewEra Retro Sneakers mang phong cách cổ điển nhưng vô cùng thời trang và hiện đại."
+    },
+    {
+      "id": "47",
+      "id_nhasx": "4",
+      "id_danhmuc": "2",
+      "ten": "Áo MLB Varsity Jacket",
+      "gia": "2000000",
+      "gia_km": "1800000",
+      "hinh": "https://cdn.vuahanghieu.com/unsafe/0x900/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2023/10/ao-bomber-mlb-wool-basic-varsity-jacket-new-york-yankees-3ajpv0634-50bkl-mau-den-652de78bbbe8d-17102023084651.jpg",
+      "ngay": "2023-03-01",
+      "xem": 85,
+      "hot": "0",
+      "an_hien": "1",
+      "mo_ta": "Áo MLB Varsity Jacket với thiết kế trẻ trung, lý tưởng cho những ngày thu đông."
+    },
+    {
+      "id": "48",
+      "id_nhasx": "1",
+      "id_danhmuc": "3",
+      "ten": "Quần Adidas Techfit Leggings",
+      "gia": "1500000",
+      "gia_km": "1300000",
+      "hinh": "https://bizweb.dktcdn.net/thumb/grande/100/340/361/products/quanleggingdangdaicotuitechfit-ef68405d-ade1-4d09-ae4b-4871223ac58a.jpg?v=1727144593717",
+      "ngay": "2023-02-10",
+      "xem": 95,
+      "hot": "1",
+      "an_hien": "1",
+      "mo_ta": "Quần Adidas Techfit Leggings hỗ trợ bạn tối đa trong mọi hoạt động thể thao."
+    },
+    {
+      "id": "49",
+      "id_nhasx": "2",
+      "id_danhmuc": "1",
+      "ten": "Giày Nike Court Royale",
+      "gia": "2500000",
+      "gia_km": "2100000",
+      "hinh": "https://bizweb.dktcdn.net/thumb/grande/100/413/756/products/nike-court-royale-749747-141.jpg?v=1685069853643",
+      "ngay": "2023-01-15",
+      "xem": 100,
+      "hot": "0",
+      "an_hien": "1",
+      "mo_ta": "Giày Nike Court Royale mang phong cách cổ điển, dễ phối với nhiều trang phục."
+    },
+    {
+      "id": "50",
+      "id_nhasx": "3",
+      "id_danhmuc": "2",
+      "ten": "Áo Acis Sportswear Tee",
+      "gia": "1100000",
+      "gia_km": "950000",
+      "hinh": "https://product.hstatic.net/200000025394/product/upload_afd1a6993f614a24a51b7338a6de7d96.jpg",
+      "ngay": "2023-01-01",
+      "xem": 90,
+      "hot": "0",
+      "an_hien": "1",
+      "mo_ta": "Áo Acis Sportswear Tee thoáng khí phù hợp cho những ngày hè năng động."
+    }
+  ],
+  "tinh_chat": [
+    {
+      "id": "1",
+      "ten": "Bình thường"
+    },
+    {
+      "id": "2",
+      "ten": "Giá rẻ"
+    },
+    {
+      "id": "3",
+      "ten": "Giảm sốc"
+    },
+    {
+      "id": "4",
+      "ten": "Cao cấp"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "admin",
+      "password": "123456",
+      "phone": 522322920,
+      "fullname": "admin là tôi",
+      "email": "manhcuong16102004@gmail.com",
+      "rePassword": "123456",
+      "isAdmin": true,
+      "isBlocked": false,
+      "gender": "male",
+      "dob": "2004-10-16"
+    },
+    {
+      "id": "2",
+      "name": "manhcuong1610",
+      "password": "123456",
+      "phone": "0345678920",
+      "fullname": "Nguyễn Mạnh Cường",
+      "email": "cuongnmps36452@fpt.edu.vn",
+      "rePassword": "123456",
+      "isAdmin": false,
+      "isBlocked": false,
+      "gender": "male",
+      "dob": "1998-05-15"
+    },
+    {
+      "id": "3",
+      "name": "lethikhanh789",
+      "password": "khanh45678",
+      "phone": "0345678930",
+      "fullname": "Lê Thị Khanh",
+      "email": "khanh789@gmail.com",
+      "rePassword": "khanh45678",
+      "isAdmin": false,
+      "isBlocked": false,
+      "gender": "female",
+      "dob": "1995-09-25"
+    },
+    {
+      "id": "4",
+      "name": "nguyenvana123",
+      "password": "anaaa123",
+      "phone": "0345678940",
+      "fullname": "Nguyễn Văn A",
+      "email": "vana123@gmail.com",
+      "rePassword": "anaaa123",
+      "isAdmin": false,
+      "isBlocked": false,
+      "gender": "male",
+      "dob": "1992-12-12"
+    },
+    {
+      "id": "5",
+      "name": "phamngoctuan",
+      "password": "tuan12345",
+      "phone": "0345678950",
+      "fullname": "Phạm Ngọc Tuấn",
+      "email": "tuan123@gmail.com",
+      "rePassword": "tuan12345",
+      "isAdmin": false,
+      "isBlocked": false,
+      "gender": "male",
+      "dob": "2001-04-07"
+    },
+    {
+      "id": "7b91",
+      "name": "moinha",
+      "email": "manhcuong16102004@gmail.com",
+      "fullname": "123456",
+      "password": "123456",
+      "rePassword": "123456",
+      "isAdmin": false,
+      "isBlocked": false,
+      "phone": "124",
+      "gender": "male",
+      "dob": "2011-11-11"
+    },
+    {
+      "id": "9620",
+      "name": "mmmmmm",
+      "email": "admin@gmail.com",
+      "fullname": "mmmmmm",
+      "password": "123456",
+      "rePassword": "123456",
+      "isAdmin": false,
+      "isBlocked": false,
+      "phone": 987654321,
+      "gender": "male",
+      "dob": "0005-05-05"
+    },
+    {
+      "id": "a96f",
+      "name": "nhom44",
+      "email": "nhom4bon@gmail.com",
+      "fullname": "Nhom bon",
+      "password": "nhom44",
+      "rePassword": "nhom44",
+      "isAdmin": false,
+      "isBlocked": false
+    }
+  ],
+  "login": [
+    {
+      "id": "6d2d"
+    }
+  ],
+  "orders": [
+    {
+      "id": "b83a",
+      "userId": "b147",
+      "customerName": "Admin",
+      "address": "124 N08 An Bình Trung Hoà Trảng Bom Đồng",
+      "phone": "0522322920",
+      "email": "manhcuong16102004@gmail.com",
+      "totalPrice": 8300000,
+      "message": "111",
+      "status": 3,
+      "createdAt": "2024-10-30T15:53:05.628Z",
+      "productId": []
+    },
+    {
+      "id": "b2e0",
+      "userId": "1",
+      "customerName": "Đỗ Đạt Cao",
+      "address": "124 N08 An Bình Trung Hoà Trảng Bom Đồng",
+      "phone": "0522322920",
+      "email": "dodatcao@gmail.com",
+      "totalPrice": 2000000,
+      "message": "111",
+      "status": 3,
+      "createdAt": "2024-10-30T16:21:40.667Z"
+    },
+    {
+      "id": "2f2e",
+      "userId": "1",
+      "customerName": "Cường Nguyễn Mạnh",
+      "address": "124 N08 An Bình Trung Hoà Trảng Bom Đồng",
+      "phone": "0522322920",
+      "email": "dodatcao@gmail.com",
+      "totalPrice": 4200000,
+      "message": "",
+      "status": 4,
+      "createdAt": "2024-10-30T16:59:25.770Z"
+    },
+    {
+      "id": "6cf5",
+      "userId": "b147",
+      "customerName": "Cường Nguyễn Mạnh",
+      "address": "124 N08 An Bình Trung Hoà Trảng Bom Đồng",
+      "phone": "0522322920",
+      "email": "manhcuong16102004@gmail.com",
+      "totalPrice": 8300000,
+      "message": "",
+      "status": 1,
+      "createdAt": "2024-10-31T05:49:33.471Z"
+    },
+    {
+      "id": "c2d8",
+      "userId": "b147",
+      "customerName": "Cường Nguyễn Mạnh",
+      "address": "124 N08 An Bình Trung Hoà Trảng Bom Đồng",
+      "phone": "0522322920",
+      "email": "manhcuong16102004@gmail.com",
+      "totalPrice": 2000000,
+      "message": "",
+      "status": 1,
+      "createdAt": "2024-10-31T05:49:45.718Z"
+    },
+    {
+      "id": "bde2",
+      "userId": "b147",
+      "customerName": "Cường Nguyễn Mạnh",
+      "address": "124 N08 An Bình Trung Hoà Trảng Bom Đồng",
+      "phone": "0522322920",
+      "email": "manhcuong16102004@gmail.com",
+      "totalPrice": 10400000,
+      "message": "",
+      "status": 2,
+      "createdAt": "2024-10-31T15:06:16.483Z"
+    },
+    {
+      "id": "59b3",
+      "userId": "b147",
+      "customerName": "Cường Nguyễn Mạnh",
+      "address": "124 N08 An Bình Trung Hoà Trảng Bom Đồng",
+      "phone": "0522322920",
+      "email": "manhcuong16102004@gmail.com",
+      "totalPrice": 2000000,
+      "message": "1",
+      "status": 1,
+      "createdAt": "2024-11-21T14:21:59.265Z"
+    },
+    {
+      "id": "3ec9",
+      "userId": "b147",
+      "customerName": "Cường Nguyễn Mạnh",
+      "address": "124 N08 An Bình Trung Hoà Trảng Bom Đồng",
+      "phone": "0522322920",
+      "email": "manhcuong16102004@gmail.com",
+      "totalPrice": 8300000,
+      "message": "",
+      "status": 0,
+      "createdAt": "2024-11-21T15:09:52.807Z"
+    },
+    {
+      "id": "cffd",
+      "userId": "b147",
+      "customerName": "Cường Nguyễn Mạnh",
+      "address": "124 N08 An Bình Trung Hoà Trảng Bom Đồng",
+      "phone": "0522322920",
+      "email": "manhcuong16102004@gmail.com",
+      "totalPrice": 4200000,
+      "message": "",
+      "status": 3,
+      "createdAt": "2024-11-23T16:10:33.692Z"
+    },
+    {
+      "id": "eec8",
+      "userId": "b147",
+      "customerName": "mới lắm nha",
+      "address": "124 N08 An Bình Trung Hoà Trảng Bom Đồng",
+      "phone": "0522322920",
+      "email": "manhcuong16102004@gmail.com",
+      "totalPrice": 6200000,
+      "message": "121334",
+      "status": 0,
+      "createdAt": "2024-11-23T16:13:23.854Z"
+    },
+    {
+      "id": "3342",
+      "userId": "b147",
+      "customerName": "mới lắm nha",
+      "address": "124 N08 An Bình Trung Hoà Trảng Bom Đồng",
+      "phone": "0522322920",
+      "email": "manhcuong16102004@gmail.com",
+      "totalPrice": 6200000,
+      "message": "121334",
+      "status": 0,
+      "createdAt": "2024-11-23T16:13:28.174Z"
+    },
+    {
+      "id": "f229",
+      "userId": "b147",
+      "customerName": "hẻhehhw",
+      "address": "124 N08 An Bình Trung Hoà Trảng Bom Đồng",
+      "phone": "0522322920",
+      "email": "manhcuong16102004@gmail.com",
+      "totalPrice": 6300000,
+      "message": "",
+      "status": 0,
+      "createdAt": "2024-11-23T16:14:08.381Z"
+    },
+    {
+      "id": "35d2",
+      "userId": "b147",
+      "customerName": "sadasfafda",
+      "address": "124 N08 An Bình Trung Hoà Trảng Bom Đồng",
+      "phone": "0522322920",
+      "email": "manhcuong16102004@gmail.com",
+      "totalPrice": 6300000,
+      "message": "",
+      "status": 0,
+      "createdAt": "2024-11-23T16:15:49.705Z"
+    },
+    {
+      "id": "1eda",
+      "userId": "b147",
+      "customerName": "Cường Nguyễn Mạnh",
+      "address": "124 N08 An Bình Trung Hoà Trảng Bom Đồng",
+      "phone": "0522322920",
+      "email": "manhcuong16102004@gmail.com",
+      "totalPrice": 2200000,
+      "message": "",
+      "status": 0,
+      "createdAt": "2024-11-23T16:19:42.786Z"
+    },
+    {
+      "id": "8633",
+      "userId": "b147",
+      "customerName": "Cường Nguyễn Mạnh",
+      "address": "124 N08 An Bình Trung Hoà Trảng Bom Đồng",
+      "phone": "0522322920",
+      "email": "manhcuong16102004@gmail.com",
+      "totalPrice": 2200000,
+      "message": "",
+      "status": 0,
+      "createdAt": "2024-11-23T16:22:17.534Z"
+    },
+    {
+      "id": "3f21",
+      "userId": "b147",
+      "customerName": "Cường Nguyễn Mạnh",
+      "address": "124 N08 An Bình Trung Hoà Trảng Bom Đồng",
+      "phone": "0522322920",
+      "email": "manhcuong16102004@gmail.com",
+      "totalPrice": 8300000,
+      "message": "",
+      "status": 0,
+      "createdAt": "2024-11-26T11:01:53.714Z",
+      "products": [
+        {
+          "productId": "1",
+          "productPrice": "2000000",
+          "quantity": 1
+        },
+        {
+          "productId": "2",
+          "productPrice": "2200000",
+          "quantity": 1
+        },
+        {
+          "productId": "3",
+          "productPrice": "4100000",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "d061",
+      "userId": "b147",
+      "customerName": "Cường Nguyễn Mạnh",
+      "address": "124 N08 An Bình Trung Hoà Trảng Bom Đồng",
+      "phone": "0522322920",
+      "email": "manhcuong16102004@gmail.com",
+      "totalPrice": 8200000,
+      "message": "",
+      "status": 0,
+      "createdAt": "2024-11-27T05:16:18.176Z",
+      "products": [
+        {
+          "productId": "3",
+          "productName": "Giày Nike Nam Chính Hãng - Nike Air Force 1",
+          "productPrice": "4100000",
+          "quantity": 1
+        },
+        {
+          "productId": "3",
+          "productName": "Giày Nike Nam Chính Hãng - Nike Air Force 1",
+          "productPrice": "4100000",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "f64c",
+      "userId": "1",
+      "customerName": "Nguyễn Mạnh Cường",
+      "address": "124 N08 An Bình",
+      "phone": "0562396185",
+      "email": "manhcuong16102004@gmail.com",
+      "totalPrice": 2000000,
+      "message": "",
+      "status": 3,
+      "createdAt": "2024-12-19T03:21:20.355Z",
+      "products": [
+        {
+          "productId": "1",
+          "productName": "Giày Adidas chính hãng - Advantage Base nữ",
+          "productPrice": "2000000",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "d871",
+      "userId": "3",
+      "customerName": "Lê Thị Khanh",
+      "address": "1107QL1A",
+      "phone": "01234567890",
+      "email": "khanh789@gmail.com",
+      "totalPrice": 16100000,
+      "message": "123",
+      "status": 0,
+      "createdAt": "2024-12-19T04:00:36.221Z",
+      "products": [
+        {
+          "productId": "4",
+          "productName": "Giày Adidas Stan Smith Fairway M20324",
+          "productPrice": "2300000",
+          "quantity": 1
+        },
+        {
+          "productId": "11",
+          "productName": "Giày Nike Jordan 1 Retro High OG",
+          "productPrice": "5600000",
+          "quantity": 1
+        },
+        {
+          "productId": "16",
+          "productName": "Giày Adidas Yeezy Boost 350 V2",
+          "productPrice": "6200000",
+          "quantity": 1
+        },
+        {
+          "productId": "1",
+          "productName": "Giày Adidas chính hãng - Advantage Base nữ",
+          "productPrice": "2000000",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "a84e",
+      "userId": "2",
+      "customerName": "sâsafsadfsafas",
+      "address": "bfsaabcbiasbcasui",
+      "phone": "0987612345",
+      "email": "safsafasf@gmail.com",
+      "totalPrice": 7800000,
+      "message": "",
+      "status": 0,
+      "createdAt": "2024-12-25T07:08:49.115Z",
+      "products": [
+        {
+          "productId": "7",
+          "productName": "Giày Acis Gel-Kayano 28",
+          "productPrice": "3900000",
+          "quantity": 2
+        }
+      ]
+    }
+  ],
+  "comment": [
+    {
+      "id": "1",
+      "productId": "1",
+      "userId": "1",
+      "content": "Giày đẹp giá rẻ sài gòn",
+      "createdDate": "16-10-2004"
+    },
+    {
+      "id": "2",
+      "productId": "2",
+      "userId": "1",
+      "content": "Giày đẹp giá rẻ sài gòn",
+      "createdDate": "16-10-2004"
+    },
+    {
+      "id": "3",
+      "productId": "3",
+      "userId": "1",
+      "content": "Giày đẹp giá rẻ sài gòn",
+      "createdDate": "16-10-2004"
+    }
+  ],
+  "orderDetails": [
+    {
+      "id": "be52",
+      "orderId": null,
+      "productId": "1",
+      "productPrice": "2000000",
+      "quantity": 4
+    },
+    {
+      "id": "a95e",
+      "orderId": null,
+      "productId": "3",
+      "productPrice": "4100000",
+      "quantity": 2
+    },
+    {
+      "id": "11bb",
+      "orderId": null,
+      "productId": "2",
+      "productPrice": "2200000",
+      "quantity": 2
+    },
+    {
+      "id": "b4a9",
+      "orderId": null,
+      "productId": "3",
+      "productPrice": "4100000",
+      "quantity": 1
+    },
+    {
+      "id": "e0f8",
+      "orderId": null,
+      "productId": "1",
+      "productPrice": "2000000",
+      "quantity": 1
+    },
+    {
+      "id": "16a9",
+      "orderId": null,
+      "productId": "1",
+      "productPrice": "2000000",
+      "quantity": 1
+    },
+    {
+      "id": "e5e0",
+      "orderId": "b83a",
+      "productId": "1",
+      "productPrice": "2000000",
+      "quantity": 1
+    },
+    {
+      "id": "3952",
+      "orderId": "b83a",
+      "productId": "3",
+      "productPrice": "4100000",
+      "quantity": 1
+    },
+    {
+      "id": "374c",
+      "orderId": "b83a",
+      "productId": "2",
+      "productPrice": "2200000",
+      "quantity": 1
+    },
+    {
+      "id": "20df",
+      "orderId": "4b38",
+      "productId": "2",
+      "productPrice": "2200000",
+      "quantity": 1
+    },
+    {
+      "id": "3915",
+      "orderId": "b2e0",
+      "productId": "1",
+      "productPrice": "2000000",
+      "quantity": 1
+    },
+    {
+      "id": "dd1c",
+      "orderId": "2f2e",
+      "productId": "1",
+      "productPrice": "2000000",
+      "quantity": 1
+    },
+    {
+      "id": "f452",
+      "orderId": "2f2e",
+      "productId": "2",
+      "productPrice": "2200000",
+      "quantity": 1
+    },
+    {
+      "id": "7881",
+      "orderId": null,
+      "productId": "1",
+      "productPrice": "2000000",
+      "quantity": 1
+    },
+    {
+      "id": "b5ad",
+      "orderId": null,
+      "productId": "2",
+      "productPrice": "2200000",
+      "quantity": 1
+    },
+    {
+      "id": "0ac4",
+      "orderId": "6cf5",
+      "productId": "2",
+      "productPrice": "2200000",
+      "quantity": 1
+    },
+    {
+      "id": "854b",
+      "orderId": "6cf5",
+      "productId": "3",
+      "productPrice": "4100000",
+      "quantity": 1
+    },
+    {
+      "id": "4404",
+      "orderId": "6cf5",
+      "productId": "1",
+      "productPrice": "2000000",
+      "quantity": 1
+    },
+    {
+      "id": "556b",
+      "orderId": "c2d8",
+      "productId": "1",
+      "productPrice": "2000000",
+      "quantity": 1
+    },
+    {
+      "id": "7a4c",
+      "orderId": null,
+      "productId": "1",
+      "productPrice": "2000000",
+      "quantity": 1
+    },
+    {
+      "id": "3e7b",
+      "orderId": "bde2",
+      "productId": "1",
+      "productPrice": "2000000",
+      "quantity": 3
+    },
+    {
+      "id": "558e",
+      "orderId": "bde2",
+      "productId": "2",
+      "productPrice": "2200000",
+      "quantity": 2
+    },
+    {
+      "id": "1e19",
+      "orderId": null,
+      "productId": "1",
+      "productPrice": "2000000",
+      "quantity": 1
+    },
+    {
+      "id": "a8d9",
+      "orderId": null,
+      "productId": "2",
+      "productPrice": "2200000",
+      "quantity": 1
+    },
+    {
+      "id": "2c9c",
+      "orderId": "59b3",
+      "productId": "1",
+      "productPrice": "2000000",
+      "quantity": 1
+    },
+    {
+      "id": "dbc4",
+      "orderId": "3ec9",
+      "productId": "1",
+      "productPrice": "2000000",
+      "quantity": 1
+    },
+    {
+      "id": "e11a",
+      "orderId": "3ec9",
+      "productId": "2",
+      "productPrice": "2200000",
+      "quantity": 1
+    },
+    {
+      "id": "a258",
+      "orderId": "3ec9",
+      "productId": "3",
+      "productPrice": "4100000",
+      "quantity": 1
+    },
+    {
+      "id": "84f9",
+      "orderId": "58c0",
+      "productId": "1",
+      "productPrice": "2000000",
+      "quantity": 2
+    },
+    {
+      "id": "5de7",
+      "orderId": "cffd",
+      "productId": "1",
+      "productPrice": "2000000",
+      "quantity": 1
+    },
+    {
+      "id": "1327",
+      "orderId": "cffd",
+      "productId": "2",
+      "productPrice": "2200000",
+      "quantity": 1
+    },
+    {
+      "id": "ba9c",
+      "orderId": "eec8",
+      "productId": "1",
+      "productPrice": "2000000",
+      "quantity": 2
+    },
+    {
+      "id": "3459",
+      "orderId": "eec8",
+      "productId": "2",
+      "productPrice": "2200000",
+      "quantity": 1
+    },
+    {
+      "id": "b945",
+      "orderId": "3342",
+      "productId": "1",
+      "productPrice": "2000000",
+      "quantity": 2
+    },
+    {
+      "id": "a999",
+      "orderId": "3342",
+      "productId": "2",
+      "productPrice": "2200000",
+      "quantity": 1
+    },
+    {
+      "id": "8e64",
+      "orderId": "f229",
+      "productId": "2",
+      "productPrice": "2200000",
+      "quantity": 1
+    },
+    {
+      "id": "cc8f",
+      "orderId": "f229",
+      "productId": "3",
+      "productPrice": "4100000",
+      "quantity": 1
+    },
+    {
+      "id": "7f83",
+      "orderId": "35d2",
+      "productId": "2",
+      "productPrice": "2200000",
+      "quantity": 1
+    },
+    {
+      "id": "390d",
+      "orderId": "35d2",
+      "productId": "3",
+      "productPrice": "4100000",
+      "quantity": 1
+    },
+    {
+      "id": "7f00",
+      "orderId": "1eda",
+      "productId": "2",
+      "productPrice": "2200000",
+      "quantity": 1
+    },
+    {
+      "id": "ebb8",
+      "orderId": "8633",
+      "productId": "2",
+      "productPrice": "2200000",
+      "quantity": 1
+    },
+    {
+      "id": "a415",
+      "orderId": "3f21",
+      "productId": "1",
+      "productPrice": "2000000",
+      "quantity": 1
+    },
+    {
+      "id": "4d60",
+      "orderId": "3f21",
+      "productId": "2",
+      "productPrice": "2200000",
+      "quantity": 1
+    },
+    {
+      "id": "a178",
+      "orderId": "3f21",
+      "productId": "3",
+      "productPrice": "4100000",
+      "quantity": 1
+    },
+    {
+      "id": "8453",
+      "orderId": null,
+      "productId": "1",
+      "productName": "Giày Nike Nữ Chính Hãng - Air Max Excee",
+      "productPrice": "3100000",
+      "quantity": 2
+    },
+    {
+      "id": "cb47",
+      "orderId": "d061",
+      "productId": "3",
+      "productName": "Giày Nike Nam Chính Hãng - Nike Air Force 1",
+      "productPrice": "4100000",
+      "quantity": 1
+    },
+    {
+      "id": "1313",
+      "orderId": "d061",
+      "productId": "3",
+      "productName": "Giày Nike Nam Chính Hãng - Nike Air Force 1",
+      "productPrice": "4100000",
+      "quantity": 1
+    },
+    {
+      "id": "daaa",
+      "orderId": null,
+      "productId": "4",
+      "productName": "Giày Adidas Stan Smith Fairway M20324",
+      "productPrice": "2300000",
+      "quantity": 1
+    },
+    {
+      "id": "36b1",
+      "orderId": "f64c",
+      "productId": "1",
+      "productName": "Giày Adidas chính hãng - Advantage Base nữ",
+      "productPrice": "2000000",
+      "quantity": 1
+    },
+    {
+      "id": "e270",
+      "orderId": "d871",
+      "productId": "4",
+      "productName": "Giày Adidas Stan Smith Fairway M20324",
+      "productPrice": "2300000",
+      "quantity": 1
+    },
+    {
+      "id": "c077",
+      "orderId": "d871",
+      "productId": "11",
+      "productName": "Giày Nike Jordan 1 Retro High OG",
+      "productPrice": "5600000",
+      "quantity": 1
+    },
+    {
+      "id": "245f",
+      "orderId": "d871",
+      "productId": "16",
+      "productName": "Giày Adidas Yeezy Boost 350 V2",
+      "productPrice": "6200000",
+      "quantity": 1
+    },
+    {
+      "id": "bfb5",
+      "orderId": "d871",
+      "productId": "1",
+      "productName": "Giày Adidas chính hãng - Advantage Base nữ",
+      "productPrice": "2000000",
+      "quantity": 1
+    },
+    {
+      "id": "9731",
+      "orderId": "a84e",
+      "productId": "7",
+      "productName": "Giày Acis Gel-Kayano 28",
+      "productPrice": "3900000",
+      "quantity": 2
+    }
+  ],
+  "reviews": [
+    {
+      "id": "1",
+      "productId": "1",
+      "content": "Sản phẩm rất tốt!",
+      "rating": 5,
+      "customerName": "Nguyễn Văn A",
+      "date": "2023-10-01"
+    },
+    {
+      "id": "2",
+      "productId": "1",
+      "content": "Chất lượng ổn.",
+      "rating": 4,
+      "customerName": "Trần Thị B",
+      "date": "2023-10-02"
+    },
+    {
+      "id": "3",
+      "productId": "4",
+      "content": "Rất hài lòng với sản phẩm này.",
+      "rating": 5,
+      "customerName": "Lê Văn C",
+      "date": "2023-10-03"
+    },
+    {
+      "id": "fa58",
+      "productId": "2",
+      "customerName": "Tên Khách Hàng",
+      "content": "ss",
+      "rating": "4",
+      "date": "2024-11-04T14:29:45.207Z"
+    },
+    {
+      "id": "e6ce",
+      "productId": "2",
+      "customerName": "Tên Khách Hàng",
+      "username": "Tên Khách Hàng",
+      "content": "aa",
+      "rating": "5",
+      "date": "2024-11-04T15:52:49.108Z"
+    },
+    {
+      "id": "d712",
+      "productId": "3",
+      "customerName": "Tên Khách Hàng",
+      "username": "Tên Khách Hàng",
+      "content": "quá đã",
+      "rating": "2",
+      "date": "2024-11-07T10:44:05.364Z"
+    },
+    {
+      "id": "0aa3",
+      "productId": "1",
+      "customerName": "Tên Khách Hàng",
+      "username": "",
+      "rating": 5,
+      "content": "Giày đẹp lắm nha",
+      "date": "2024-12-19T03:21:49.136Z"
+    }
+  ],
+  "album-images": [
+    {
+      "id": "84ab",
+      "title": "1",
+      "src": "https://pendecor.vn/uploads/files/2021/04/15/quan-tran-shoes-8.jpg"
+    },
+    {
+      "id": "6624",
+      "title": "2",
+      "src": "https://pendecor.vn/uploads/files/2021/04/15/quan-tran-shoes-2.jpg"
+    },
+    {
+      "id": "0417",
+      "title": "3",
+      "src": "https://pendecor.vn/uploads/files/2021/04/15/quan-tran-shoes-5.jpg"
+    },
+    {
+      "id": "e7ef",
+      "title": "4",
+      "src": "https://pendecor.vn/uploads/files/2021/04/15/quan-tran-shoes-4.jpg"
+    },
+    {
+      "id": "9cf8",
+      "title": "5",
+      "src": "https://pendecor.vn/uploads/files/2021/04/15/quan-tran-shoes-1.jpg"
+    },
+    {
+      "id": "3185",
+      "title": "6",
+      "src": "https://pendecor.vn/uploads/files/2021/04/15/quan-tran-shoes-10.jpg"
+    }
+  ],
+  "news": [
+    {
+      "id": "1",
+      "title": "Giày Air Jordan Real - Secondhand sắp cập bến!!!",
+      "description": "Cận cảnh hơn 200 đôi giày Nike Air Jordan chính hãng đã qua sử dụng sắp cập bến tại Tiệm Giày Cũ Sài Gòn",
+      "date": "2023-10-01",
+      "image": "https://bizweb.dktcdn.net/thumb/grande/100/424/874/files/z4214956675880-13d60d0122fce8e1ef6afb15c7d9ba51.jpg?v=1679890387358"
+    },
+    {
+      "id": "2",
+      "title": "AIR MAX DAY 2023",
+      "description": "Đối với Tiệm, những đôi Nike Air Max cũ chính là dòng giày \"khởi nghiệp\" khi bước chân vào thị trường 2hand kể từ năm 2015 đến nay.",
+      "date": "2023-10-02",
+      "image": "https://bizweb.dktcdn.net/100/424/874/files/post-1-air-max-day.jpg?v=1679542069445"
+    },
+    {
+      "id": "3",
+      "title": "NHỮNG ĐÔI GIÀY AIR FORCE 1 ĐƯỢC YÊU THÍCH NHẤT",
+      "description": "Bạn có quen thuộc với giày AF1 của Nike? Năm nay, hãng đã ra mắt nhiều phiên bản màu sắc nổi bật. Phiên bản nào là yêu thích nhất của bạn?",
+      "date": "2023-10-03",
+      "image": "https://giaygiare.vn/upload/sanpham/thumbs/nhung-doi-giay-air-force-1-duoc-yeu-thich-nhat.jpg"
+    },
+    {
+      "id": "4",
+      "title": "GIÀY THỂ THAO CHƠI PICKLEBALL, QUẦN VỢT, TENNIS",
+      "description": "Nếu bạn đang chuẩn bị ra sân chơi các bộ môn như tennis, pickleball, quần vợt, cầu lông",
+      "date": "2024-11-21",
+      "image": "https://giaygiare.vn/upload/images/asics-court-ff-2-novak-white-kale.jpg"
+    }
+  ]
+}

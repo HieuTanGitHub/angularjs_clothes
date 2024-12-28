@@ -1,0 +1,9 @@
+<div>
+  <h2>Đánh Giá Khách Hàng</h2>
+  <div *ngFor="let review of reviews">
+    <p>{{ review.content }}</p>
+  </div>
+
+  <textarea [(ngModel)]="newReview" placeholder="Để lại đánh giá của bạn..."></textarea>
+  <button (click)="submitReview()">Gửi Đánh Giá</button>
+</div>

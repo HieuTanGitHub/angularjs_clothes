@@ -1,0 +1,95 @@
+<div class="container cart-container" *ngIf="cartList.length; else emptyCart">
+  <app-cart-nav></app-cart-nav>
+
+  <div class="content">
+    <div class="content-left">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Sản phẩm</th>
+            <th scope="col">Size</th>
+            <th scope="col">Giá</th>
+            <th scope="col">Số lượng</th>
+            <th scope="col">Tạm tính</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of cartList">
+            <th scope="row">
+              <div class="remove-icon" (click)="onRemoveProduct(item.id)">
+                <i class="fas fa-times"></i>
+              </div>
+            </th>
+            <td>
+              <div class="d-flex align-items-center gap-2">
+                <img
+                  src="{{ item.hinh }}"
+                  alt="Product image"
+                  class="product-img"
+                />
+                <a
+                  [routerLink]="['/product-detail', item.id]"
+                  class="product-name">{{ item.ten }}</a>
+              </div>
+            </td>
+            <td>{{ item.size }}</td> <!-- Hiển thị Size -->
+            <td>{{ item.gia | currency: "VND":"symbol" }}</td> <!-- Hiển thị giá gốc -->
+            <td>
+              <div class="d-flex align-items-center quantity-wrap">
+                <button class="btn btn-primary" (click)="onDecrease(item.id)">
+                  -
+                </button>
+                <input
+                  type="text"
+                  readonly
+                  class="form-control quantity"
+                  value="{{ item.so_luong }}"
+                />
+                <button class="btn btn-primary" (click)="onIncrease(item.id)">
+                  +
+                </button>
+              </div>
+            </td>
+            <td>
+              {{ item.gia * item.so_luong | currency: "VND":"symbol" }} <!-- Tính tổng tiền -->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="content-right">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Cộng giỏ hàng</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Tạm tính</td>
+            <td>{{ totalPrice | currency: "VND":"symbol" }}</td>
+          </tr>
+          <tr>
+            <td>Tổng</td>
+            <td>{{ totalPrice | currency: "VND":"symbol" }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button class="btn btn-primary w-100" (click)="onCheckout()">
+        Tiến hành thanh toán
+      </button>
+    </div>
+  </div>
+</div>
+
+<ng-template #emptyCart>
+  <div class="container cart-container">
+    <p class="text-center font-weight-bolder">
+      Chưa có sản phẩm nào trong giỏ hàng
+    </p>
+  </div>
+</ng-template>

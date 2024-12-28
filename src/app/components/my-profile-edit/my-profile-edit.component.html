@@ -1,0 +1,114 @@
+<div class="container my-5">
+  <h3 class="text-primary">Cập nhật thông tin cá nhân</h3>
+  <p class="text-muted">Vui lòng chỉnh sửa thông tin bên dưới:</p>
+  <hr />
+  <form (ngSubmit)="updateProfile()" #profileForm="ngForm">
+    <div class="mb-3">
+      <label class="form-label">Tên đầy đủ</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="user.fullname"
+        name="fullname"
+        required
+        #fullname="ngModel"
+      />
+      <div
+        *ngIf="fullname.invalid && fullname.touched"
+        class="text-danger mt-2"
+      >
+        Tên là bắt buộc
+      </div>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Email</label>
+      <input
+        type="email"
+        class="form-control"
+        [(ngModel)]="user.email"
+        name="email"
+        required
+        pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$"
+        #email="ngModel"
+      />
+      <div *ngIf="email.invalid && email.touched" class="text-danger mt-2">
+        <div *ngIf="email.errors?.['required']">
+          <p>Email là bắt buộc</p>
+        </div>
+        <div *ngIf="email.errors?.['pattern']">
+          <p>Email phải có đuôi &#64;gmail.com</p>
+        </div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Số điện thoại</label>
+      <input
+        type="number"
+        class="form-control"
+        [(ngModel)]="user.phone"
+        name="phone"
+        required
+        pattern="^[0-9]{9}$"
+        #phone="ngModel"
+      />
+      <div *ngIf="phone.invalid && phone.touched" class="text-danger mt-2">
+        Số điện thoại phải có 10 chữ số
+      </div>
+    </div>
+    <div class="mb-3 d-flex flex-wrap">
+      <label class="form-label me-5">Giới tính</label>
+      <div class="form-check mx-3">
+        <input
+          class="form-check-input"
+          type="radio"
+          [(ngModel)]="user.gender"
+          name="gender"
+          value="male"
+        />
+        <label class="form-check-label">Nam</label>
+      </div>
+      <div class="form-check mx-3">
+        <input
+          class="form-check-input"
+          type="radio"
+          [(ngModel)]="user.gender"
+          name="gender"
+          value="female"
+        />
+        <label class="form-check-label">Nữ</label>
+      </div>
+      <div class="form-check mx-3">
+        <input
+          class="form-check-input"
+          type="radio"
+          [(ngModel)]="user.gender"
+          name="gender"
+          value="other"
+        />
+        <label class="form-check-label">Khác</label>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="dob" class="form-label">Ngày sinh</label>
+      <input
+        type="date"
+        id="dob"
+        class="form-control"
+        [(ngModel)]="user.dob"
+        name="dob"
+        required
+        #dob="ngModel"
+      />
+      <div *ngIf="dob.invalid && dob.touched" class="text-danger">
+        Ngày sinh là bắt buộc.
+      </div>
+    </div>
+    <button
+      type="submit"
+      class="btn btn-success"
+      [disabled]="profileForm.invalid"
+    >
+      Lưu thay đổi
+    </button>
+  </form>
+</div>

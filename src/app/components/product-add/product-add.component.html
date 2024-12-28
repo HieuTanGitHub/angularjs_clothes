@@ -1,0 +1,172 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2 bg-light" style="min-height: 100vh">
+      <div class="list-group list-group-flush">
+        <a href="/admin" class="list-group-item list-group-item-action py-3">
+          <i class="bi bi-house-door pe-3"></i>
+          Bảng điều khiển
+        </a>
+
+        <a href="/admin-shop" class="list-group-item list-group-item-action py-3">
+          <i class="bi bi-shop pe-3"></i>
+          Quản lý cửa hàng
+        </a>
+
+        <a
+          href="/product-list"
+          class="list-group-item list-group-item-action py-3 active"
+        >
+          <i class="bi bi-cart pe-3"></i>
+          Sản phẩm
+        </a>
+
+        <a
+          href="/category-list"
+          class="list-group-item list-group-item-action py-3"
+        >
+          <i class="bi bi-list pe-3"></i>
+          Danh mục
+        </a>
+
+        <a
+          href="/admin-order"
+          class="list-group-item list-group-item-action py-3"
+        >
+          <i class="bi bi-bag pe-3"></i>
+          Đơn hàng
+        </a>
+
+        <a href="/account-admin" class="list-group-item list-group-item-action py-3">
+          <i class="bi bi-people pe-3"></i>
+          Người dùng
+        </a>
+
+        <a
+          href="/admin-doanhthu"
+          class="list-group-item list-group-item-action py-3"
+        >
+          <i class="bi bi-bag pe-3"></i>
+          Doanh thu
+        </a>
+      </div>
+    </div>
+
+    <div class="col-md-10 p-0">
+      <div class="col-12 col-md-12 col-lg-8 col-xl-8">
+        <form (ngSubmit)="onSubmit()" [formGroup]="productForm">
+          <div class="card">
+            <div class="card-header">Thêm sản phẩm mới</div>
+            <div class="card-body">
+              <!-- Tên sản phẩm -->
+              <div class="form-group">
+                <label for="ten">Tên sản phẩm</label>
+                <input
+                  type="text"
+                  id="ten"
+                  formControlName="ten"
+                  class="form-control"
+                  placeholder="Nhập tên sản phẩm"
+                />
+                <small
+                  *ngIf="productForm.get('ten')?.invalid && productForm.get('ten')?.touched"
+                  class="text-muted"
+                >
+                  Tên sản phẩm là bắt buộc và ít nhất 6 ký tự
+                </small>
+              </div>
+
+              <!-- Danh mục -->
+              <div class="form-group">
+                <label for="category">Danh mục</label>
+                <select
+                  id="category"
+                  formControlName="id_nhasx"
+                  class="form-control"
+                >
+                  <option value="" disabled>Chọn danh mục</option>
+                  <option
+                    *ngFor="let category of categories"
+                    [value]="category.id"
+                  >
+                    {{ category.ten }}
+                  </option>
+                </select>
+                <small
+                  *ngIf="productForm.get('id_nhasx')?.invalid && productForm.get('id_nhasx')?.touched"
+                  class="text-muted"
+                >
+                  Danh mục là bắt buộc
+                </small>
+              </div>
+
+              <!-- Giá -->
+              <div class="form-group">
+                <label for="gia">Giá</label>
+                <input
+                  type="number"
+                  id="gia_km"
+                  formControlName="gia_km"
+                  class="form-control"
+                  placeholder="Nhập giá"
+                />
+                <small
+                  *ngIf="productForm.get('gia_km')?.invalid && productForm.get('gia_km')?.touched"
+                  class="text-muted"
+                >
+                  Giá là bắt buộc
+                </small>
+              </div>
+
+              <!-- Tải ảnh -->
+              <div class="form-group">
+                <label for="hinh">URL Ảnh</label>
+                <input
+                  type="text"
+                  id="hinh"
+                  formControlName="hinh"
+                  class="form-control"
+                  placeholder="Nhập URL ảnh"
+                />
+                <img
+                  *ngIf="productForm.get('hinh')?.value"
+                  [src]="productForm.get('hinh')?.value"
+                  alt="Xem trước hình ảnh"
+                  style="width: 100px; height: auto; margin-top: 10px;"
+                />
+              </div>
+
+              <!-- Mô tả -->
+              <div class="form-group">
+                <label for="mo_ta">Mô tả</label>
+                <textarea
+                  id="mo_ta"
+                  formControlName="mo_ta"
+                  class="form-control"
+                  placeholder="Nhập mô tả"
+                ></textarea>
+                <small
+                  *ngIf="productForm.get('mo_ta')?.invalid && productForm.get('mo_ta')?.touched"
+                  class="text-muted"
+                >
+                  Mô tả là bắt buộc
+                </small>
+              </div>
+
+              <div *ngIf="successMessage" class="alert alert-success mt-3">
+                {{ successMessage }}
+              </div>
+
+              <!-- Submit -->
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary" [disabled]="productForm.invalid">
+                  Thêm sản phẩm
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</div>

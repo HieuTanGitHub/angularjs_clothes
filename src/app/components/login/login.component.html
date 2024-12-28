@@ -1,0 +1,188 @@
+
+<div class="gray py-3">
+  <div class="container">
+    <div class="row">
+      <div class="colxl-12 col-lg-12 col-md-12">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Pages</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Login</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ======================= Top Breadcrubms ======================== -->
+
+<!-- ======================= Login Detail ======================== -->
+<section class="middle">
+  <div class="container">
+    <div class="row align-items-start justify-content-between">
+
+      <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <form (ngSubmit)="onLogin()" [formGroup]="loginForm">
+          <div class="card">
+            <div class="card-header">
+              Login
+            </div>
+            <div class="card-body">
+              <div class="form-group">
+                <label for="id">Tên đăng nhập</label>
+                 <input type="text" name="name" id="id"
+                 formControlName="name"
+                 [(ngModel)]="userdn.name" class="form-control" placeholder="Input any Username" aria-describedby="idHelpId">
+                <small *ngIf="!loginForm.get('name')?.valid && loginForm.get('name')?.touched" id="idHelpId" class="text-muted">Username is required</small>
+              </div>
+              <div class="form-group">
+                <label for="password">Mật khẩu</label>
+                <input type="password" name="password" id="name"
+                formControlName="password"
+                [(ngModel)]="userdn.password" class="form-control" placeholder="Input any password" aria-describedby="nameHelpId">
+                <small *ngIf="!loginForm.get('password')?.valid && loginForm.get('password')?.touched" id="nameHelpId" class="text-muted">Password is required and at least 6 characters</small>
+              </div>
+              <div class="form-group">
+                <button class="btn btn-primary">Login</button>
+                <a href="/forgot-password" class="btn btn-link">Quên mật khẩu?</a>
+            </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mfliud">
+        <form class="border p-3 rounded" [formGroup]="registerF" (ngSubmit)="onSubmit()">
+          <div class="row">
+            <div class="form-group col-md-12">
+              <label>Tên đăng nhập</label>
+              <input type="text" class="form-control" formControlName="name" placeholder="Vd: manhcuong1610">
+              <div *ngIf="registerF.get('name')?.hasError('minlength') && registerF.get('name')?.touched">
+                <div class="text-danger">Tên đăng nhập tối thiểu 6 ký tự.</div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-md-12">
+              <label>Họ Và Tên</label>
+              <input type="text" class="form-control" formControlName="fullname" placeholder="Vd: Nguyễn Mạnh Cường">
+              <div *ngIf="registerF.get('fullname')?.hasError('minlength') && registerF.get('fullname')?.touched">
+                <div class="text-danger">Họ Và Tên tối thiểu 6 ký tự.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Email *</label>
+            <input type="text" class="form-control" formControlName="email" placeholder="name@email.com*">
+            <div *ngIf="registerF.get('email')?.hasError('email') && registerF.get('email')?.touched">
+              <div class="text-danger alert-dismissible fade show" role="alert">
+                <strong>Email </strong> không hợp lệ
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group col-md-6">
+              <label>Mật khẩu *</label>
+              <input type="password" class="form-control" formControlName="password" placeholder="Password*">
+              <div *ngIf="registerF.get('password')?.hasError('minlength') && registerF.get('password')?.touched">
+                <div class="text-danger">Mật khẩu tối thiểu 6 ký tự.</div>
+              </div>
+            </div>
+
+            <div class="form-group col-md-6">
+              <label>Nhập lại mật khẩu *</label>
+              <input type="password" class="form-control" formControlName="rePassword" placeholder="Confirm Password*">
+            </div>
+          </div>
+
+          <div *ngIf="registerF.hasError('mismatch') && (registerF.get('rePassword')?.touched || registerF.get('password')?.touched)">
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+              Mật khẩu không khớp.
+            </div>
+          </div>
+
+          <!-- <div *ngIf="registerF.hasError('mismatch') && registerF.get('rePassword')?.touched">
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+              Mật khẩu không khớp.
+            </div>
+          </div>
+
+          <div *ngIf="registerF.hasError('mismatch') && registerF.get('rePassword')?.touched">
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+              Mật khẩu không khớp.
+            </div>
+          </div> -->
+
+          <div class="form-group">
+            <button type="submit" class="btn btn-md full-width bg-dark text-light fs-md ft-medium">Tạo tài
+              khoản</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ======================= Login End ======================== -->
+
+<!-- ============================= Customer Features =============================== -->
+<section class="px-0 py-3 br-top">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+        <div class="d-flex align-items-center justify-content-start py-2">
+          <div class="d_ico">
+            <i class="fas fa-shopping-basket theme-cl"></i>
+          </div>
+          <div class="d_capt">
+            <h5 class="mb-0">Free Shipping</h5>
+            <span class="text-muted">Capped at $10 per order</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+        <div class="d-flex align-items-center justify-content-start py-2">
+          <div class="d_ico">
+            <i class="far fa-credit-card theme-cl"></i>
+          </div>
+          <div class="d_capt">
+            <h5 class="mb-0">Secure Payments</h5>
+            <span class="text-muted">Up to 6 months installments</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+        <div class="d-flex align-items-center justify-content-start py-2">
+          <div class="d_ico">
+            <i class="fas fa-shield-alt theme-cl"></i>
+          </div>
+          <div class="d_capt">
+            <h5 class="mb-0">15-Days Returns</h5>
+            <span class="text-muted">Shop with fully confidence</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+        <div class="d-flex align-items-center justify-content-start py-2">
+          <div class="d_ico">
+            <i class="fas fa-headphones-alt theme-cl"></i>
+          </div>
+          <div class="d_capt">
+            <h5 class="mb-0">24x7 Fully Support</h5>
+            <span class="text-muted">Get friendly support</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{{ user.name | json }},{{ user.fullname | json }},{{ user.password | json }}, {{ user.email | json }}
+

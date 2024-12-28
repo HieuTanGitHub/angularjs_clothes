@@ -1,0 +1,141 @@
+/* Toàn bộ bố cục */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+
+/* Main Content */
+.col-md-10 {
+  background-color: #ffffff;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+/* Tiêu đề */
+h1, h2 {
+  font-weight: bold;
+  color: #343a40;
+  border-bottom: 2px solid #343a40;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+/* Nút hành động */
+.btn-success,
+.btn-warning,
+.btn-danger {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border: none;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  border: none;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border: none;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Thẻ card */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #343a40;
+}
+
+.card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Modal Popup */
+.modal-header {
+  background-color: #343a40;
+  color: #fff;
+  border-bottom: 1px solid #495057;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+}
+
+.modal-footer {
+  border-top: 1px solid #ddd;
+}
+
+.modal-content {
+  border-radius: 10px;
+}
+
+/* Input và Form */
+.form-control {
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+textarea.form-control {
+  height: 120px;
+  resize: none;
+}
+
+.form-label {
+  font-weight: bold;
+  color: #343a40;
+}
+
+.form-control:focus {
+  border-color: #495057;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .col-md-2 {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    z-index: 1000;
+  }
+
+  .col-md-10 {
+    margin-top: 60px;
+    padding: 15px;
+  }
+
+  .list-group-item {
+    text-align: center;
+  }
+
+  .list-group-item i {
+    display: block;
+    margin: 5px 0;
+  }
+}

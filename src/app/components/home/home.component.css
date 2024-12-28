@@ -1,0 +1,463 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.card {
+  border-radius: 5px; /* Rounded corners for the card */
+  overflow: hidden; /* Ensure contents fit within rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.2s; /* Smooth transform transition */
+}
+
+.card:hover {
+  transform: scale(1.02); /* Scale card slightly on hover */
+}
+
+.card img {
+  border-radius: 5px 5px 0 0; /* Rounded corners for the image */
+  height: 200px; /* Set a fixed height for the images */
+  object-fit: cover; /* Cover the space while maintaining aspect ratio */
+}
+
+.add-to-cart {
+  position: absolute; /* Positioning the button */
+  top: 10px; /* Adjust for the top space */
+  right: 10px; /* Aligning to the right */
+}
+
+.btn {
+  padding: 6px 12px; /* Giảm padding cho nút để nhỏ gọn hơn */
+  font-size: 0.85rem; /* Giảm kích thước chữ để phù hợp với kích thước mới của nút */
+  border-radius: 5px; /* Bo tròn các góc của nút */
+  text-transform: uppercase; /* Chữ in hoa */
+  transition: background-color 0.3s, border-color 0.3s; /* Hiệu ứng chuyển màu nền */
+}
+
+.btn-primary {
+  background-color: #257a5e; /* Màu nền nút chính */
+  border: 1px solid #257a5e; /* Viền của nút chính */
+}
+
+.btn-primary:hover {
+  background-color: #257a5e; /* Màu nền khi hover */
+  border-color: #257a5e; /* Viền của nút khi hover */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Thêm bóng ở trạng thái hover */
+}
+
+
+/* Optional: Style for the star rating */
+.my-2 i {
+  font-size: 1rem; /* Adjust the font size of stars */
+}
+.card {
+  height: 100%; /* Ensures card takes full height for uniformity */
+  overflow: hidden; /* Ensures any overflow is hidden */
+  border-radius: 5px; /* Rounded corners for the card */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+  transition: transform 0.2s; /* Adds hover effect to scale */
+}
+
+.card:hover {
+  transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
+.card img {
+  height: 200px; /* Set a specific height for images */
+  object-fit: cover; /* Maintain aspect ratio while covering */
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column; /* Ensures elements stack vertically */
+}
+
+
+/* Optional: Style for the star rating */
+.my-2 i {
+  font-size: 1rem; /* Sets font size for stars */
+}
+
+.mt-auto {
+  margin-top: auto; /* Pushes button to the bottom of the card */
+}
+.container {
+  max-width: 1110px; /* Set max-width for the container */
+}
+
+.card {
+  border-radius: 5px; /* Rounded corners for the card */
+  overflow: hidden; /* Ensure contents fit within rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.2s; /* Smooth transform transition */
+}
+
+.card:hover {
+  transform: scale(1.02); /* Scale card slightly on hover */
+}
+
+.card img {
+  height: 200px; /* Set fixed height for the images */
+  object-fit: cover; /* Cover the space while maintaining aspect ratio */
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  height: 100%; /* Use full height of the card */
+}
+
+.add-to-cart {
+  margin-top: auto; /* Push button to the bottom of the card */
+  text-align: right; /* Align button to the right */
+}
+
+/* Optional: Style for the star rating */
+.my-2 i {
+  font-size: 1rem; /* Adjust the font size of stars */
+}
+
+.custom-container {
+  max-width: 1110px;
+  margin: 0 auto; /* This centers the container */
+  padding-left: 15px; /* Optional: Add padding for responsiveness */
+  padding-right: 15px; /* Optional: Add padding for responsiveness */
+}
+
+/* In your styles.css or main style file */
+@font-face {
+  font-family: 'Island Moments';
+  src: url('/assets/fonts/IslandMoments.woff2') format('woff2'),
+       url('/assets/fonts/IslandMoments.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Global Styles */
+body {
+  font-family: 'Inter', sans-serif; /* Default font for the application */
+}
+
+.island-moments {
+  font-family: 'Island Moments', cursive; /* Font class for Island Moments */
+}
+
+.customer-img {
+  width: 300px; /* Fixed width */
+  height: auto; /* Automatic height to maintain aspect ratio */
+  object-fit: cover; /* Cover the space while maintaining the aspect ratio */
+  border-radius: 50%; /* Keep it rounded */
+}
+
+.notification {
+  position: fixed; /* Để cho thông báo cố định trên màn hình */
+  top: 20px; /* Khoảng cách từ trên cùng */
+  right: 20px; /* Khoảng cách từ cạnh phải */
+  background-color: #dff0d8; /* Màu nền */
+  color: #3c763d; /* Màu chữ */
+  padding: 15px;
+  border: 1px solid #d6e9c6;
+  border-radius: 5px;
+  z-index: 1000; /* Để thông báo phủ lên các phần tử khác */
+  display: flex; /* Để hiển thị icon và văn bản cạnh nhau */
+  align-items: center;
+  max-width: 300px; /* Chiều rộng tối đa */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Đổ bóng để tạo độ nổi */
+}
+
+.icon-success {
+  margin-right: 10px; /* Khoảng cách giữa icon và văn bản */
+  color: #5cb85c; /* Màu cho icon thành công */
+  font-size: 20px; /* Kích thước icon */
+}
+
+.product-card {
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-img {
+  width: 100%; /* Đảm bảo hình ảnh là 100% chiều rộng */
+  height: 200px; /* Chiều cao cố định */
+  object-fit: cover; /* Cắt ảnh để giữ tỉ lệ hình ảnh */
+}
+
+.product-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Đảm bảo body chiếm hết không gian còn lại */
+}
+
+.product-title {
+  font-weight: 500; /* Có thể điều chỉnh độ đậm cho tên sản phẩm */
+}
+
+.text-danger {
+  color: #dc3545 !important; /* Màu đỏ cho giá khuyến mãi */
+}
+
+.text-muted {
+  color: #6c757d !important; /* Màu xám cho văn bản nhạt */
+}
+
+/* Font chữ tổng thể */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Cài đặt cho thẻ tiêu đề sản phẩm */
+.product-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.product-title:hover {
+  color: #257a5e;
+}
+
+/* Giá sản phẩm */
+.product-body .text-danger {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.product-body .text-muted {
+  font-size: 0.9rem;
+}
+
+/* Nút thêm vào giỏ hàng */
+.btn.btn-primary.btn-sm {
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.3rem 0.75rem;
+}
+
+/* Cài đặt hình ảnh sản phẩm */
+.product-img {
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+
+/* Cài đặt cho card sản phẩm */
+.product-card {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+.notification {
+  position: fixed; /* Để cho thông báo cố định trên màn hình */
+  top: 20px; /* Khoảng cách từ trên cùng */
+  right: 20px; /* Khoảng cách từ cạnh phải */
+  background-color: #dff0d8; /* Màu nền */
+  color: #3c763d; /* Màu chữ */
+  padding: 15px;
+  border: 1px solid #d6e9c6;
+  border-radius: 5px;
+  z-index: 1000; /* Để thông báo phủ lên các phần tử khác */
+  display: flex; /* Để hiển thị icon và văn bản cạnh nhau */
+  align-items: center;
+  max-width: 300px; /* Chiều rộng tối đa */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Đổ bóng để tạo độ nổi */
+}
+
+.icon-success {
+  margin-right: 10px; /* Khoảng cách giữa icon và văn bản */
+  color: #5cb85c; /* Màu cho icon thành công */
+  font-size: 20px; /* Kích thước icon */
+}
+
+
+.bg-light {
+  background-color: #f8f9fa; /* màu nền sáng */
+}
+
+.card {
+  border: none; /* Xóa viền card */
+  border-radius: 10px; /* Bo tròn các góc của card */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Thêm bóng cho card */
+  transition: transform 0.3s; /* Thêm hiệu ứng chuyển động */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Phóng to card khi hover */
+}
+
+.card-img-top {
+  border-top-left-radius: 10px; /* Bo tròn góc trên bên trái hình ảnh */
+  border-top-right-radius: 10px; /* Bo tròn góc trên bên phải hình ảnh */
+  object-fit: cover; /* Giữ tỷ lệ hình ảnh */
+  height: 200px; /* Đặt chiều cao cho hình ảnh */
+}
+
+.card-title {
+  font-size: 1.25rem; /* Kích thước chữ tiêu đề */
+  font-weight: bold; /* Đặt chữ đậm */
+  margin-bottom: 15px; /* Khoảng cách dưới tiêu đề */
+}
+
+.btn-secondary {
+  background-color: #6c757d; /* Màu nền nút phụ */
+  border: 1px solid #6c757d; /* Viền của nút phụ */
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268; /* Màu nền khi hover */
+  border-color: #545b62; /* Viền của nút khi hover */
+}
+
+.py-3 {
+  padding-top: 1.5rem; /* Khoảng cách trên */
+  padding-bottom: 1.5rem; /* Khoảng cách dưới */
+}
+
+
+.item-price a{
+  text-decoration: none;
+  color: #257a5e;
+}
+
+
+#best-selling {
+  background: #EDEBE4;
+  padding: 70px 0;
+}
+
+
+#best-selling .products-thumb {
+  margin-right: 15px; /* Khoảng cách giữa hình ảnh và nội dung */
+}
+
+#best-selling .product-entry {
+  flex-grow: 1; /* Cho phép phần này mở rộng chiếm không gian còn lại */
+}
+
+#best-selling .section-title {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#best-selling .author-name {
+  font-size: 1em; /* Kích thước chữ vừa đủ */
+  color: #888;
+  margin-bottom: 5px; /* Khoảng cách dưới tên tác giả */
+}
+
+#best-selling .item-title {
+  font-size: 1.2em;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+#best-selling .item-price {
+  font-size: 1.4em;
+  color: #74642F;
+  font-weight: bold; /* Làm đậm giá sản phẩm */
+  margin-bottom: 15px;
+}
+
+#best-selling .btn-wrap .btn-accent-arrow {
+  background-color: #74642F;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none; /* Bỏ viền */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  transition: background-color 0.3s;
+}
+
+#best-selling .btn-wrap .btn-accent-arrow:hover {
+  background-color: #5a4c2d;
+}
+
+@media screen and (max-width: 768px) {
+  #best-selling .product-container {
+    flex-direction: column; /* Chuyển sang dạng cột trên màn hình nhỏ */
+    align-items: center; /* Căn giữa cho các phần tử */
+  }
+
+  #best-selling .products-thumb {
+    margin: 0 0 20px; /* Căn giữa hình ảnh */
+  }
+}
+
+
+#new-products .section-title {
+  width: 70%;
+  margin: 0 auto;
+}
+
+#new-products .prev-price {
+  color: #999;
+  font-size: 0.8em;
+  padding-right: 10px;
+  text-decoration: line-through;
+}
+
+#new-products .current-price {
+  color: #d9534f; /* Màu sắc cho giá hiện tại - chọn màu ưa thích */
+  font-size: 1.2rem; /* Kích thước font cho giá hiện tại */
+}
+
+#new-products .product-style {
+  position: relative;
+  overflow: hidden;
+}
+
+#new-products .add-to-cart {
+  left: 10px;
+  background-color: #8e8e8e; /* Màu nền cho nút */
+  color: white; /* Màu chữ */
+  border: none; /* Xóa viền */
+  padding: 10px 15px; /* Padding cho nút */
+  cursor: pointer; /* Thay đổi con trỏ khi hover */
+  transition: background-color 0.3s, opacity 0.3s; /* Hiệu ứng chuyển tiếp cho màu nền và độ mờ */
+  opacity: 0; /* Ban đầu giữ cho nút ẩn */
+  visibility: hidden; /* Ẩn nút */
+}
+#new-products .add-to-cart:hover {
+  background-color: #257a5e; /* Màu nền khi hover */
+}
+
+#new-products .product-style:hover .add-to-cart {
+  opacity: 1; /* Hiện nút khi hover */
+  visibility: visible; /* Hiện nút khi hover */
+}
+
+#new-products .product-grid {
+  display: flex;
+  flex-wrap: wrap; /* Cho phép các phần tử cuộn xuống hàng sau */
+}
+
+#new-products .product-item {
+  width: calc(25% - 20px); /* Đảm bảo 4 cột trên màn hình lớn */
+  margin-right: 10px; /* Khoảng cách giữa các sản phẩm */
+  margin-bottom: 20px; /* Khoảng cách dưới cùng */
+}
+
+@media (max-width: 768px) {
+  #new-products .product-item {
+    width: calc(50% - 20px); /* 2 cột trên màn hình nhỏ */
+  }
+}
+
+@media (max-width: 480px) {
+  #new-products .product-item {
+    width: 100%; /* Full width cho màn hình mobile */
+  }
+}
+
+.bgalbum{
+  background-color:#EDEBE4 ;
+}

@@ -1,0 +1,62 @@
+.cart-container {
+  padding: 32px 0;
+}
+
+.content {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 32px;
+
+  &-left {
+    grid-column: span 8 / span 8;
+  }
+
+  &-right {
+    grid-column: span 4 / span 4;
+  }
+}
+
+.table th {
+  border-top: none;
+  text-transform: uppercase;
+}
+
+tbody th,
+tbody td {
+  vertical-align: middle;
+  font-weight: 400 !important;
+}
+
+.content-right {
+  thead th:first-child {
+    padding-left: 0;
+    font-size: 16px;
+  }
+
+  thead th:last-child {
+    text-align: right;
+    padding-right: 0;
+    font-size: 16px;
+  }
+
+  tbody tr td:first-child {
+    padding-left: 0;
+  }
+
+  tbody tr td:last-child {
+    padding-right: 0;
+    text-align: right;
+  }
+
+  .font-bold {
+    font-weight: 500 !important;
+  }
+}
+
+.form-group {
+  label {
+    font-weight: 400 !important;
+    margin-bottom: 2px;
+  }
+}

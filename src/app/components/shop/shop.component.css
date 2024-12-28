@@ -1,0 +1,202 @@
+/* Font chữ tổng thể */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Cài đặt cho thẻ tiêu đề sản phẩm */
+.product-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.product-title:hover {
+  color: #007bff;
+}
+
+/* Giá sản phẩm */
+.product-body .text-danger {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.product-body .text-muted {
+  font-size: 0.9rem;
+}
+.item-price a{
+  text-decoration: none;
+  color: #257a5e;
+}
+
+/* Nút thêm vào giỏ hàng */
+.btn.btn-primary.btn-sm {
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.3rem 0.75rem;
+}
+
+
+/* Cài đặt hình ảnh sản phẩm */
+.product-img {
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+
+/* Cài đặt cho card sản phẩm */
+.product-card {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+.notification {
+  position: fixed; /* Để cho thông báo cố định trên màn hình */
+  top: 20px; /* Khoảng cách từ trên cùng */
+  right: 20px; /* Khoảng cách từ cạnh phải */
+  background-color: #dff0d8; /* Màu nền */
+  color: #3c763d; /* Màu chữ */
+  padding: 15px;
+  border: 1px solid #d6e9c6;
+  border-radius: 5px;
+  z-index: 1000; /* Để thông báo phủ lên các phần tử khác */
+  display: flex; /* Để hiển thị icon và văn bản cạnh nhau */
+  align-items: center;
+  max-width: 300px; /* Chiều rộng tối đa */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Đổ bóng để tạo độ nổi */
+}
+
+/* Cài đặt cho thẻ tiêu đề sản phẩm */
+.custom-title {
+  font-size: 1.2rem; /* Thay đổi kích thước chữ cho tiêu đề */
+}
+
+/* Cài đặt cho hình ảnh sản phẩm */
+.custom-img {
+  width: 100%; /* Đặt lại chiều rộng cho hình ảnh 100% để khớp với card */
+  height: auto; /* Để giữ tỷ lệ hình ảnh */
+}
+
+/* Cài đặt cho card sản phẩm */
+.product-style {
+  border-radius: 5px;
+  overflow: hidden; /* Đảm bảo border-radius hoạt động cho hình ảnh */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Cài đặt cho phần tiêu đề sản phẩm */
+.card-title {
+  font-size: 1em; /* Kích thước chữ nhỏ hơn cho tiêu đề sản phẩm */
+}
+
+/* Nút điều hướng */
+.page-link {
+  font-size: 0.9rem; /* Giảm kích thước chữ cho các nút điều hướng */
+}
+
+/* Bố cục cho mỗi danh mục sản phẩm */
+.row {
+  display: flex;
+  flex-wrap: wrap; /* Để cho phép các thẻ flex đi xuống nếu không đủ chỗ */
+}
+
+/* Điều chỉnh kích thước cột cho 6 danh mục trong 1 hàng */
+.col-md-4 {
+  flex: 0 0 16.66%; /* Chiều rộng cột cho phép hiển thị 6 cột trên một hàng */
+  max-width: 16.66%;
+}
+
+/* Cải tiến phong cách cho ô tìm kiếm */
+.input-group {
+  max-width: 600px; /* Đặt chiều rộng tối đa cho ô tìm kiếm */
+  width: 100%; /* Đảm bảo nó chiếm toàn bộ không gian có sẵn */
+}
+
+.input-group .form-control {
+  border-top-left-radius: 5px; /* Bo góc cho ô tìm kiếm */
+  border-bottom-left-radius: 5px;
+  border: 1px solid #007bff; /* Đường viền */
+  box-shadow: none; /* Bỏ bóng để sạch sẽ hơn */
+}
+
+.input-group .form-control:focus {
+  border-color: #0056b3; /* Đổi màu viền khi ô tìm kiếm được chọn */
+  box-shadow: 0 0 5px rgba(0, 86, 179, 0.5); /* Thêm bóng cho ô tìm kiếm */
+}
+
+.input-group .btn-primary {
+  border-top-right-radius: 5px; /* Bo góc cho nút tìm kiếm */
+  border-bottom-right-radius: 5px;
+}
+
+
+#new-products .section-title {
+  width: 70%;
+  margin: 0 auto;
+}
+
+#new-products .prev-price {
+  color: #999;
+  font-size: 0.8em;
+  padding-right: 10px;
+  text-decoration: line-through;
+}
+
+#new-products .current-price {
+  color: #d9534f; /* Màu sắc cho giá hiện tại - chọn màu ưa thích */
+  font-size: 1.2rem; /* Kích thước font cho giá hiện tại */
+}
+
+#new-products .product-style {
+  position: relative;
+  overflow: hidden;
+}
+
+#new-products .add-to-cart {
+  left: 10px;
+  background-color: #8e8e8e; /* Màu nền cho nút */
+  color: white; /* Màu chữ */
+  border: none; /* Xóa viền */
+  padding: 10px 15px; /* Padding cho nút */
+  cursor: pointer; /* Thay đổi con trỏ khi hover */
+  transition: background-color 0.3s, opacity 0.3s; /* Hiệu ứng chuyển tiếp cho màu nền và độ mờ */
+  opacity: 0; /* Ban đầu giữ cho nút ẩn */
+  visibility: hidden; /* Ẩn nút */
+}
+#new-products .add-to-cart:hover {
+  background-color: #257a5e; /* Màu nền khi hover */
+}
+
+#new-products .product-style:hover .add-to-cart {
+  opacity: 1; /* Hiện nút khi hover */
+  visibility: visible; /* Hiện nút khi hover */
+}
+
+#new-products .product-grid {
+  display: flex;
+  flex-wrap: wrap; /* Cho phép các phần tử cuộn xuống hàng sau */
+}
+
+#new-products .product-item {
+  width: calc(25% - 20px); /* Đảm bảo 4 cột trên màn hình lớn */
+  margin-right: 10px; /* Khoảng cách giữa các sản phẩm */
+  margin-bottom: 20px; /* Khoảng cách dưới cùng */
+}
+
+@media (max-width: 768px) {
+  #new-products .product-item {
+    width: calc(50% - 20px); /* 2 cột trên màn hình nhỏ */
+  }
+}
+
+@media (max-width: 480px) {
+  #new-products .product-item {
+    width: 100%; /* Full width cho màn hình mobile */
+  }
+}

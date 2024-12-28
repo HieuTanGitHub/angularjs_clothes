@@ -1,0 +1,267 @@
+<link href="https://fonts.googleapis.com/css2?family=Island+Moments&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- Modal -->
+<div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="w-100 pt-1 mb-5 text-right">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <form action="" method="get" class="modal-content modal-body border-0 p-0">
+      <div class="input-group mb-2">
+        <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
+        <button type="submit" class="input-group-text bg-success text-light">
+          <i class="fa fa-fw fa-search text-white"></i>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Start Banner Hero -->
+<div id="template-mo-zay-hero-carousel" class="carousel slide" data-bs-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="0" class="active"></li>
+    <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="1"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="container">
+        <div class="row p-5">
+          <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+            <img class="img-fluid" src="./assets/img/banner_img_01.jpg" alt="">
+          </div>
+          <div class="col-lg-6 mb-0 d-flex align-items-center">
+            <div class="text-align-left align-self-center">
+              <h1 class="h1 text-success"><b>Lope</b> ShoesAndFashion</h1>
+              <h3 class="h2">Giày chính hãng giá rẻ</h3>
+              <p>
+                Điểm đến lý tưởng cho những ai yêu thích thời trang giày dép và quần áo phong cách.
+                Chúng tôi mang đến những sản phẩm chất lượng, hợp xu hướng và phù hợp với mọi phong cách cá nhân.
+                Hãy đến với Lope để nâng tầm phong cách của bạn!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="container">
+        <div class="row p-5">
+          <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+            <img class="img-fluid" src="../../../assets/img/diceo.png" alt="">
+          </div>
+          <div class="col-lg-6 mb-0 d-flex align-items-center">
+            <div class="text-align-left">
+              <h1 class="h1">Nhà Lope</h1>
+              <h3 class="h2">Thời trang đa dạng</h3>
+              <p>
+                Khám phá sự đa dạng và phong phú của các mẫu giày và trang phục tại Lope ShoesAndFashion.
+                Chúng tôi cam kết mang đến những sản phẩm thời trang nổi bật, từ thiết kế hiện đại đến chất liệu cao cấp, giúp bạn tự tin tỏa sáng mỗi ngày.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev text-decoration-none w-auto ps-3" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="prev">
+    <i class="fas fa-chevron-left"></i>
+  </a>
+  <a class="carousel-control-next text-decoration-none w-auto pe-3" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="next">
+    <i class="fas fa-chevron-right"></i>
+  </a>
+</div>
+<!-- End Banner Hero -->
+
+<section class="bg-light">
+  <div class="container py-5">
+    <!-- Customer Categories Section -->
+    <div class="row py-3">
+      <div class="col-lg-12 m-auto">
+        <h1 class="h1">Danh Mục Sản Phẩm</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-lg-3 mb-4" *ngFor="let category of paginatedCategories">
+        <figure class="product-style">
+          <img [src]="category.hinh" class="card-img-top" alt="{{ category.ten }}" />
+        </figure>
+        <figcaption>
+          <h5 class="card-title">{{ category.ten }}</h5>
+          <div class="item-price">
+            <a [routerLink]="['/product-category/' + category.id]">Xem Chi Tiết</a>
+          </div>
+        </figcaption>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-auto">
+        <button (click)="prevPage()" [disabled]="!hasPrev()" class="btn btn-secondary mr-2">Quay Lại</button>
+        <button (click)="nextPage()" [disabled]="!hasNext()" class="btn btn-secondary">Tiếp Theo</button>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Customer Categories Section -->
+
+<!-- Start Promotional Banners Section -->
+<section id="best-selling" class="leaf-pattern-overlay">
+  <div class="corner-pattern-overlay"></div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-12" *ngIf="topSellingProduct; else noProductTemplate">
+        <div class="product-container d-flex align-items-start">
+          <figure class="products-thumb">
+            <img [src]="topSellingProduct.hinh" alt="{{ topSellingProduct.ten }}" class="single-image" style="width: 500px; height: 500px;">
+          </figure>
+          <div class="product-entry ml-3">
+            <h2 class="section-title divider">Sản Phẩm Phổ Biến Nhất</h2>
+            <hr><br>
+            <div class="author-name">Nhà sản xuất: {{ manufacturerNames[topSellingProduct.id] }}</div> <!-- Hiển thị tên nhà sản xuất -->
+            <h3 class="item-title">{{ topSellingProduct.ten }}</h3>
+            <div class="item-desc">{{ topSellingProduct.mo_ta }}</div>
+            <br>
+            <div class="item-price h2">{{ topSellingProduct.gia | currency:'VND':'symbol' }}</div>
+            <div class="btn-wrap">
+              <button [routerLink]="['/product-detail', topSellingProduct.id]" routerLinkActive="router-link-active" class="btn-accent-arrow">Shop it now <i class="icon icon-ns-arrow-right"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ng-template #noProductTemplate>
+        <p>Không có sản phẩm phổ biến nào để hiển thị.</p>
+      </ng-template>
+    </div>
+  </div>
+</section>
+<!-- End Promotional Banners Section -->
+<!-- Start Popular Products Section -->
+
+<section id="new-products" class="bookshelf mt-5 ">
+  <div class="section-header align-center">
+    <h2 class="section-title">Sản Phẩm Phổ Biến</h2>
+    <br>
+      <div class="container">
+        <div class="row">
+            <div class="inner-content">
+                <div class="product-list" data-aos="fade-up">
+                    <div class="grid product-grid">
+                        <div class="col-12 col-md-6 col-lg-3 mb-4" *ngFor="let product of popularProducts | slice:0:8" class="product-item">
+                            <figure class="product-style">
+                                <a [routerLink]="['/product-detail', product.id]" routerLinkActive="router-link-active">
+                                    <img [src]="product.hinh" class="product-item" alt="{{ product.ten }}" style="object-fit: cover; width: 100%; height: 200px;">
+                                </a>
+
+                                <!-- Thêm phần chọn kích cỡ -->
+                                <label for="size">Chọn kích cỡ:</label>
+                                <select [(ngModel)]="selectedSize[product.id]" id="size">
+                                    <option *ngFor="let size of sizes" [value]="size">{{ size }}</option>
+                                </select>
+
+                                <button type="button" class="add-to-cart" (click)="addToCart(product)">Thêm vào giỏ hàng</button>
+                            </figure>
+                            <figcaption>
+                                <b>{{ product.ten }}</b><br>
+                                <span class="author-name h-75">Nhà sản xuất: {{ manufacturerNames[product.id] }}</span><br>
+                                <span>Lượt xem: {{ product.xem || 0 }}</span>
+                                <div class="item-price">
+                                    <span class="prev-price">{{ product.gia | currency:'VND':'symbol' }}</span>
+                                    <span class="current-price">{{ product.gia_km | currency:'VND':'symbol' }}</span>
+                                </div>
+                            </figcaption>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+<!-- End Popular Products Section -->
+<!-- Start Featured Product -->
+
+<section class="mt-5">
+<section id="new-products" class="bookshelf pb-5 mb-5 ">
+  <div class="section-header align-center">
+      <h2 class="section-title">Sản phẩm Mới</h2>
+      <br>
+  </div>
+
+  <div class="container">
+      <div class="row">
+          <div class="inner-content">
+              <div class="product-list" data-aos="fade-up">
+                  <div class="grid product-grid">
+                      <div class="col-12 col-md-6 col-lg-3 mb-4" *ngFor="let product of products | slice:0:8" class="product-item">
+                          <figure class="product-style">
+                              <a [routerLink]="['/product-detail', product.id]" routerLinkActive="router-link-active">
+                                  <img [src]="product.hinh" class="product-item" alt="{{ product.ten }}" style="object-fit: cover; width: 100%; height: 200px;">
+                              </a>
+
+                              <!-- Thêm phần chọn kích cỡ -->
+                              <label for="size">Chọn kích cỡ:</label>
+                              <select [(ngModel)]="selectedSize[product.id]" id="size">
+                                  <option *ngFor="let size of sizes" [value]="size">{{ size }}</option>
+                              </select>
+                              <button type="button" class="add-to-cart" (click)="addToCart(product)">Thêm vào giỏ hàng</button>
+                          </figure>
+                          <figcaption>
+                              <b>{{ product.ten }}</b><br>
+                              <span class="author-name h-75">Nhà sản xuất: {{ manufacturerNames[product.id] }}</span><br>
+                              <span>Ngày: {{product.ngay}}</span>
+                              <div class="item-price">
+                                  <span class="prev-price">{{ product.gia | currency:'VND':'symbol' }}</span>
+                                  <span class="current-price">{{ product.gia_km | currency:'VND':'symbol' }}</span>
+                              </div>
+                          </figcaption>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- Start Image Album Section -->
+<section class="bgalbum">
+  <div class="container py-5">
+    <div class="row py-3">
+      <div class="col-lg-12 m-auto">
+        <h1 class="h1">Album Ảnh</h1>
+        <p>Xem những bộ sưu tập hình ảnh mới nhất từ Lope ShoesAndFashion.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-4 mb-4" *ngFor="let albumImage of albumImages">
+        <div class="card h-100">
+          <img [src]="albumImage.src" class="card-img-top" alt="{{ albumImage.alt }}" style="object-fit: cover; height: 200px;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Image Album Section -->
+
+<!-- Start News Section -->
+<section class="bg-light">
+  <div class="container py-5">
+    <div class="row py-3">
+      <div class="col-lg-12 m-auto">
+        <h1 class="h1">Tin Tức</h1>
+        <p>Xem những tin tức mới nhất từ Lope ShoesAndFashion.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-3 mb-4" *ngFor="let news of newsArticles">
+        <div class="card h-100">
+          <img [src]="news.image" class="card-img-top" alt="{{ news.title }}" style="object-fit: cover; height: 200px;">
+          <div class="card-body">
+            <h5 class="card-title">{{ news.title }}</h5>
+            <p class="card-text">{{ news.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End News Section -->

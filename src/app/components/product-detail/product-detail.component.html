@@ -1,0 +1,98 @@
+<div class="product-container">
+  <div class="product-layout">
+    <img [src]="product.hinh" alt="Hình sản phẩm" class="product-image">
+    <div class="product-info">
+      <h1 class="product-title">{{ product.ten }}</h1>
+      <p class="view-count">Lượt xem: {{ product.xem || 0 }}</p>
+      <div class="rating">
+        <span *ngFor="let star of [].constructor(5); let i = index">
+          <i class="fas fa-star" [ngClass]="{'text-warning': i < getAverageRating(), 'text-muted': i >= getAverageRating()}"></i>
+        </span>
+        ({{ reviews.length }} đánh giá)
+      </div>
+      <p class="product-description">
+        {{product.mo_ta}}
+      </p>
+      <p class="product-price">Giá khuyến mãi: {{ product.gia_km | currency:'VND':'symbol' }}</p>
+      <p class="original-price">Giá gốc: {{ product.gia | currency:'VND':'symbol' }}</p>
+      <p class="size-label">Kích thước:
+        <select [(ngModel)]="selectedSize">
+          <option value="">Chọn kích thước</option>
+          <option value="36">36</option>
+          <option value="37">37</option>
+          <option value="38">38</option>
+          <option value="39">39</option>
+          <option value="40">40</option>
+          <option value="41">41</option>
+          <option value="42">42</option>
+          <option value="43">43</option>
+        </select>
+      </p>
+      <button class="add-button" (click)="addToCart(product)">Thêm vào giỏ hàng</button>
+      <div *ngIf="submissionMessage" class="submission-message">{{ submissionMessage }}</div>
+    </div>
+  </div>
+
+  <!-- <div class="details-section">
+    <h2 class="details-title">Chi tiết sản phẩm</h2>
+    <p class="details-content">
+      Sản phẩm này được sản xuất từ các vật liệu bền và thân thiện với môi trường. Với thiết kế hiện đại, sản phẩm không chỉ đẹp mắt mà còn rất thoải mái khi sử dụng. Chúng tôi cam kết cung cấp sản phẩm với chất lượng tốt nhất và dịch vụ khách hàng tận tâm. Hãy trải nghiệm sự khác biệt với sản phẩm của chúng tôi!
+    </p>
+    <ul class="details-list">
+      <li>Chất liệu: Da thật cao cấp</li>
+      <li>Màu sắc: Đen, Nâu, Trắng</li>
+      <li>Xuất xứ: Việt Nam</li>
+      <li>Bảo hành: 12 tháng</li>
+      <li>Hướng dẫn bảo quản: Tránh ánh nắng trực tiếp, lau sạch bằng khăn ẩm.</li>
+    </ul>
+  </div> -->
+
+  <!-- Phần sản phẩm liên quan -->
+  <div class="related-products" *ngIf="relatedProducts.length > 0">
+    <h2 class="related-title">Sản phẩm liên quan</h2>
+    <div class="related-products-list">
+      <div *ngFor="let relatedProduct of relatedProducts" class="related-product">
+        <img [src]="relatedProduct.hinh" alt="{{ relatedProduct.ten }}" class="related-product-image">
+        <h3 class="related-product-title">{{ relatedProduct.ten }}</h3>
+        <p class="related-product-price">Giá: {{ relatedProduct.gia | currency:'VND':'symbol' }}</p>
+        <button class="view-details-button" (click)="navigateToProductDetail(relatedProduct.id)">Xem chi tiết</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hiển thị thông báo nếu sản phẩm chưa được tải -->
+  <div *ngIf="!product">
+    <p>Đang tải sản phẩm...</p>
+  </div>
+
+  <!-- Hiển thị thông báo nếu không có sản phẩm liên quan -->
+  <div *ngIf="relatedProducts.length === 0 && product">
+    <p>Không có sản phẩm liên quan nào.</p>
+  </div>
+
+  <!-- Phần đánh giá sản phẩm -->
+  <div class="review-section">
+    <h3>Đánh Giá Sản Phẩm</h3>
+
+    <div *ngIf="reviews.length > 0; else noReviews">
+      <div *ngFor="let review of reviews" class="review">
+        <div class="review-header">
+          <strong>{{ review.username }}</strong>
+          <span class="review-date">{{ review.date | date: 'shortDate' }}</span>
+        </div>
+        <div class="review-rating">
+          <span *ngFor="let star of [].constructor(5); let i = index">
+            <i class="fas fa-star" [ngClass]="{'text-warning': i < (review.rating || 0), 'text-muted': i >= (review.rating || 0)}"></i>
+          </span>
+        </div>
+        <p>{{ review.content }}</p>
+      </div>
+    </div>
+
+    <ng-template #noReviews>
+      <p>Chưa có đánh giá nào cho sản phẩm này. Hãy là người đầu tiên đánh giá!</p>
+    </ng-template>
+
+    <div *ngIf="submissionMessage" class="submission-message">{{ submissionMessage }}</div>
+  </div>
+</div>

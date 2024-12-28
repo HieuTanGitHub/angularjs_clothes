@@ -1,0 +1,14 @@
+<div *ngIf="newsDetail; else loading">
+  <h1>{{ newsDetail?.title }}</h1>
+  <p>{{ newsDetail?.description }}</p>
+  <small>{{ newsDetail?.date }}</small>
+  <img [src]="newsDetail?.image" alt="{{ newsDetail?.title }}" />
+</div>
+
+<ng-template #loading>
+  <p>Loading...</p>
+</ng-template>
+
+<div *ngIf="!newsDetail">
+  <p>News not found or failed to load.</p>
+</div>

@@ -1,0 +1,217 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2 bg-light" style="min-height: 100vh">
+      <div class="list-group list-group-flush">
+        <!-- Side Menu Items -->
+        <a href="/admin" class="list-group-item list-group-item-action py-3">
+          <i class="bi bi-house-door pe-3"></i> Bảng điều khiển
+        </a>
+        <a href="/#" class="list-group-item list-group-item-action py-3">
+          <i class="bi bi-shop pe-3"></i> Quản lý cửa hàng
+        </a>
+        <a
+          href="/product-list"
+          class="list-group-item list-group-item-action py-3"
+        >
+          <i class="bi bi-cart pe-3"></i> Sản phẩm
+        </a>
+        <a
+          href="/category-list"
+          class="list-group-item list-group-item-action py-3"
+        >
+          <i class="bi bi-list pe-3"></i> Danh mục
+        </a>
+        <a
+          href="/admin-order"
+          class="list-group-item list-group-item-action py-3 active"
+        >
+          <i class="bi bi-bag pe-3"></i> Đơn hàng
+        </a>
+        <a
+          href="/account-admin"
+          class="list-group-item list-group-item-action py-3"
+        >
+          <i class="bi bi-people pe-3"></i> Người dùng
+        </a>
+        <a
+          href="/admin-doanhthu"
+          class="list-group-item list-group-item-action py-3"
+        >
+          <i class="bi bi-bag pe-3"></i> Doanh thu
+        </a>
+      </div>
+    </div>
+
+    <div class="col-md-10 p-4">
+      <h2 class="my-3">Quản lý đơn hàng</h2>
+      <div
+        class="d-flex flex-wrap border border-primary rounded-3 my-3 bg-primary"
+      >
+        <div class="col-md-2 px-0">
+          <div class="card bg-primary text-white">
+            <div class="card-header">Tổng số đơn hàng</div>
+            <div class="card-body">
+              <p class="card-text">
+                {{ totalOrders }}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5 px-0">
+          <div class="card bg-primary text-white">
+            <div class="card-header">Tìm kiếm</div>
+            <div class="card-body">
+              <form class="d-flex" (submit)="onSearch($event)">
+                <input
+                  name="search"
+                  class="form-control me-2"
+                  type="search"
+                  [(ngModel)]="searchKeyword"
+                  placeholder="Tìm kiếm"
+                  aria-label="Search"
+                />
+                <button class="btn btn-success" type="submit">
+                  <i class="bi bi-search"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5 px-0">
+          <div class="card bg-primary text-white">
+            <div class="card-header">Trạng thái đơn hàng</div>
+            <div class="card-body">
+              <select
+                class="form-select"
+                aria-label="Default select example"
+                (change)="onStatusChange($event)"
+              >
+                <option value="">Tất cả</option>
+                <option value="0">Chờ duyệt</option>
+                <option value="1">Đang xử lý</option>
+                <option value="2">Đang giao hàng</option>
+                <option value="3">Hoàn thành</option>
+                <option value="4">Đã hủy</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>STT</th>
+            <th>Mã đơn hàng</th>
+            <th>Ngày tạo đơn</th>
+            <th>Tên khách hàng</th>
+            <th>Trạng thái</th>
+            <th>Khách phải trả</th>
+            <th>Hành động</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let order of getPaginatedOrders(); index as i">
+            <td>{{ (currentPage - 1) * itemsPerPage + (i + 1) }}</td>
+            <td>{{ order.id }}</td>
+            <td>{{ order.createdAt | date : "short" }}</td>
+            <td>{{ order.customerName }}</td>
+            <td>
+              <!-- Trạng thái đơn hàng -->
+              <div class="dropdown">
+                <span [ngClass]="getStatusBadge(order.status)">{{
+                  getStatusText(order.status)
+                }}</span>
+                <button
+                  class="btn btn-sm btn-outline-secondary dropdown-toggle"
+                  type="button"
+                  id="statusDropdown"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                ></button>
+                <ul class="dropdown-menu" aria-labelledby="statusDropdown">
+                  <li>
+                    <button
+                      class="dropdown-item"
+                      (click)="changeStatus(order, 0)"
+                    >
+                      Chờ duyệt
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="dropdown-item"
+                      (click)="changeStatus(order, 1)"
+                    >
+                      Đang xử lý
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="dropdown-item"
+                      (click)="changeStatus(order, 2)"
+                    >
+                      Đang giao hàng
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="dropdown-item"
+                      (click)="changeStatus(order, 3)"
+                    >
+                      Hoàn thành
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="dropdown-item"
+                      (click)="changeStatus(order, 4)"
+                    >
+                      Đã hủy
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </td>
+            <td>
+              {{ order.totalPrice | currency : "VND" : "symbol" : "1.0-0" }}
+            </td>
+            <td class="text-center">
+              <button
+                class="btn btn-outline-warning m-1"
+                (click)="order.id ? editOrder(order.id) : null"
+              >
+                <i class="bi bi-pencil-square">Sửa</i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <nav aria-label="Page navigation example" *ngIf="orders.length">
+        <ul class="pagination justify-content-center">
+          <li class="page-item" [class.disabled]="currentPage === 1">
+            <a class="page-link" href="#" (click)="changePage(currentPage - 1)">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li
+            class="page-item"
+            *ngFor="let page of [].constructor(totalPages); let i = index"
+            [class.active]="currentPage === i + 1"
+          >
+            <a class="page-link" href="#" (click)="changePage(i + 1)">{{
+              i + 1
+            }}</a>
+          </li>
+          <li class="page-item" [class.disabled]="currentPage === totalPages">
+            <a class="page-link" href="#" (click)="changePage(currentPage + 1)">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>

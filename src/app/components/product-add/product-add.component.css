@@ -1,0 +1,12 @@
+.toast-top-right {
+  top: 12px;
+  right: 12px;
+}
+.toast-success {
+  background-color: #28a745 !important;
+  color: #fff !important;
+}
+.toast-error {
+  background-color: #dc3545 !important;
+  color: #fff !important;
+}

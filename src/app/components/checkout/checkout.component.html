@@ -1,0 +1,138 @@
+<div class="container cart-container">
+  <app-cart-nav></app-cart-nav>
+
+  <form
+    class="content"
+    (ngSubmit)="handleCheckout()"
+    [formGroup]="formCheckout"
+    method="POST"
+  >
+    <div class="content-left">
+      <h5 class="text-uppercase mb-4">Thông tin thanh toán</h5>
+
+      <div class="form-group">
+        <label for="fullName">Họ và tên *</label>
+        <input
+          type="text"
+          class="form-control"
+          id="fullName"
+          placeholder="Nhập họ tên"
+          formControlName="fullName"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          placeholder="Nhập địa chỉ email"
+          formControlName="email"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Số điện thoại *</label>
+        <input
+          type="text"
+          class="form-control"
+          id="phone"
+          placeholder="Nhập số điện thoại"
+          formControlName="phone"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="address">Địa chỉ *</label>
+        <input
+          type="text"
+          class="form-control"
+          id="address"
+          placeholder="Nhập địa chỉ nhận hàng"
+          formControlName="address"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="message">Ghi chú</label>
+        <textarea
+          formControlName="message"
+          id="message"
+          class="form-control"
+          placeholder="Nhập ghi chú"
+        ></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Phương thức thanh toán *</label>
+        <div>
+          <label>
+            <input
+              type="radio"
+              formControlName="paymentMethod"
+              value="cash"
+            />
+            Thanh toán khi nhận hàng
+          </label>
+        </div>
+        <div>
+          <form (ngSubmit)="onPayment()" #paymentForm="ngForm">
+            <!-- Các trường thông tin -->
+            <button type="submit">Thanh toán online</button>
+          </form>
+
+        </div>
+      </div>
+
+      <div *ngIf="formCheckout.get('paymentMethod')?.value === 'bank'" class="bank-info">
+        <h6>Thông tin chuyển khoản</h6>
+        <p>Ngân hàng: MB Bank</p>
+        <p>Số tài khoản: 5165102004</p>
+        <p>Tên chủ tài khoản: Nguyen Manh Cuong</p>
+        <div class="form-group">
+          <label for="transactionId">Mã giao dịch *</label>
+          <input
+            type="text"
+            id="transactionId"
+            class="form-control"
+            placeholder="Nhập mã giao dịch sau khi chuyển khoản"
+            formControlName="transactionId"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="content-right">
+      <h5 class="text-uppercase mb-2">Đơn hàng của bạn</h5>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Sản phẩm</th>
+            <th scope="col">Tổng</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of cartList">
+            <td>
+              {{ item.ten }}
+              <span class="font-weight-bolder">x {{ item.so_luong }}</span>
+            </td>
+            <td class="font-bold">
+              {{ item.gia * item.so_luong | currency : "VND" : "symbol" }}
+            </td>
+          </tr>
+          <tr>
+            <td class="font-bold">Tổng</td>
+            <td class="font-bold">
+              {{ totalPrice | currency : "VND" : "symbol" }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button class="btn btn-primary w-100">Đặt hàng</button>
+    </div>
+  </form>
+</div>

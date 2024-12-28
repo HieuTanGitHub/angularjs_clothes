@@ -1,0 +1,56 @@
+.dropdown-menu {
+  z-index: 1000; /* Đảm bảo dropdown nằm trên cùng */
+}
+
+.nav-item {
+  position: relative; /* Để dropdown có thể hiển thị cùng vị trí */
+}
+.contact-bar {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+
+  /* Icon */
+  .contact-item img {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin-right: 10px;
+  }
+
+  /* Text dưới icon */
+  .contact-item span {
+    font-size: 14px;
+    color: #333;
+    font-weight: normal;
+  }
+
+  /* Hiệu ứng hover cho icon */
+  .contact-item:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .contact-item:hover span {
+    color: #0078FF; /* Màu khi hover */
+  }

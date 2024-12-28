@@ -1,0 +1,124 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2 bg-light" style="min-height: 100vh">
+      <div class="list-group list-group-flush">
+        <a href="/admin" class="list-group-item list-group-item-action py-3 ">
+          <i class="bi bi-house-door pe-3"></i>
+          Bảng điều khiển
+        </a>
+
+        <a href="/admin-shop" class="list-group-item list-group-item-action py-3">
+          <i class="bi bi-shop pe-3"></i>
+          Quản lý cửa hàng
+        </a>
+        <a
+          href="/product-list"
+          class="list-group-item list-group-item-action py-3 active"
+        >
+          <i class="bi bi-cart pe-3"></i>
+          Sản phẩm
+        </a>
+        <a
+          href="/category-list"
+          class="list-group-item list-group-item-action py-3"
+        >
+          <i class="bi bi-list pe-3"></i>
+          Danh mục
+        </a>
+        <a
+          href="/admin-order"
+          class="list-group-item list-group-item-action py-3"
+        >
+          <i class="bi bi-bag pe-3"></i>
+          Đơn hàng
+        </a>
+
+        <a href="/account-admin" class="list-group-item list-group-item-action py-3">
+          <i class="bi bi-people pe-3"></i>
+          Người dùng
+        </a>
+        <a
+          href="/admin-doanhthu"
+          class="list-group-item list-group-item-action py-3 "
+        >
+          <i class="bi bi-bag pe-3"></i>
+          Doanh thu
+        </a>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-12 col-lg-8 col-xl-8">
+      <!-- Thông báo -->
+      <div *ngIf="successMessage" class="alert alert-success mt-3">
+        {{ successMessage }}
+      </div>
+      <div *ngIf="errorMessage" class="alert alert-danger mt-3">
+        {{ errorMessage }}
+      </div>
+
+      <form (ngSubmit)="onSubmit()" [formGroup]="productForm">
+        <div class="card">
+          <div class="card-header">Edit Product</div>
+          <div class="card-body">
+            <!-- Các trường form -->
+            <div class="form-group">
+              <label for="ten">Tên sản phẩm</label>
+              <input
+                type="text"
+                name="ten"
+                id="ten"
+                formControlName="ten"
+                class="form-control"
+                placeholder=""
+              />
+              <small *ngIf="!productForm.get('ten')?.valid && productForm.get('ten')?.touched" class="text-muted">
+                Tên sản phẩm là bắt buộc
+              </small>
+            </div>
+
+            <div class="form-group">
+              <label for="id_nhasx">Danh mục</label>
+              <select name="id_nhasx" id="id_nhasx" formControlName="id_nhasx" class="form-control">
+                <option *ngFor="let category of categories" [value]="category.id">{{ category.ten }}</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="gia_km">Giá</label>
+              <input
+                type="number"
+                name="gia_km"
+                id="gia_km"
+                formControlName="gia_km"
+                class="form-control"
+                placeholder=""
+              />
+              <small *ngIf="!productForm.get('gia_km')?.valid && productForm.get('gia_km')?.touched" class="text-muted">
+                Giá là bắt buộc
+              </small>
+            </div>
+
+            <div class="form-group">
+              <label for="hinh">URL Hình ảnh</label>
+              <input
+                type="text"
+                name="hinh"
+                id="hinh"
+                formControlName="hinh"
+                class="form-control"
+                placeholder=""
+              />
+              <small *ngIf="!productForm.get('hinh')?.valid && productForm.get('hinh')?.touched" class="text-muted">
+                URL hình ảnh là bắt buộc
+              </small>
+            </div>
+
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary">Sửa</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

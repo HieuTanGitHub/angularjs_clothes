@@ -1,0 +1,68 @@
+<nav class="navbar navbar-expand-lg navbar-light shadow">
+  <div class="container d-flex justify-content-between align-items-center">
+
+    <a class="navbar-brand d-none d-lg-block" href="index.html">
+      <img src="../../../assets/img/logolopenew.png" class="w-100 p-3" />
+    </a>
+
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Chuyển đổi điều hướng">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="align-self-center collapse navbar-collapse flex-fill d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+      <div class="flex-fill">
+        <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['home']">Trang Chủ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">Giới Thiệu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['shop']">Cửa Hàng</a>
+          </li>
+          <li class="dropdown nav-item mt-1">
+            <a class=" text-decoration-none dropdown-toggle nav-item" href="#" id="categoriesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              Danh Mục
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="categoriesDropdown">
+              <li *ngFor="let category of categories">
+                <a class="dropdown-item" [routerLink]="['/category', category.id]">{{ category.ten }}</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="navbar align-self-center d-flex">
+        <a class="nav-icon position-relative text-decoration-none" [routerLink]="['/cart']" *ngIf="isLogin">
+          <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
+          <span *ngIf="cartQnt > 0" class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">
+            {{ cartQnt }}
+          </span>
+        </a>
+        <div class="dropdown">
+          <a class="nav-icon position-relative text-decoration-none dropdown-toggle" href="#" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa fa-fw fa-user text-dark mr-3"></i>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+            <li><a class="dropdown-item" *ngIf="!isLogin" [routerLink]="['/login']">Đăng Nhập</a></li>
+            <li><a class="dropdown-item" *ngIf="isLogin" [routerLink]="['/my-profile', isLogin.id]">Thông Tin Của Tôi</a></li>
+            <li><a class="dropdown-item" *ngIf="isADM; else orderLink" [routerLink]="['admin']">Quản Trị</a></li>
+            <ng-template #orderLink>
+              <li><a class="dropdown-item" *ngIf="isLogin" [routerLink]="['/user']">Đơn Hàng</a></li>
+            </ng-template>
+            <li><a class="dropdown-item" *ngIf="isLogin" (click)="onLogout()">Đăng Xuất</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="contact-bar">
+  <!-- Điện thoại -->
+  <a href="tel:YOUR_PHONE_NUMBER" class="contact-item">
+    <img src="assets/img/phone-call.png" alt="Điện thoại" />
+    <span>0987654321</span>
+  </a>
+</div>

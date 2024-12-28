@@ -1,0 +1,66 @@
+<div class="col-md-10 p-4">
+  <h2>Danh sách đơn hàng</h2>
+  <form (submit)="onSearch($event)">
+    <input type="text" [(ngModel)]="searchKeyword" placeholder="Tìm kiếm đơn hàng..." class="form-control mb-3" />
+    <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+  </form>
+
+  <div *ngFor="let order of getPaginatedOrders(); index as i" class="order-item mt-3">
+    <div>
+      <h5>Đơn hàng #{{ (currentPage - 1) * itemsPerPage + (i + 1) }}</h5>
+      <p>Ngày tạo đơn: {{ order.createdAt | date : "short" }}</p>
+      <p>Trạng thái: <span [ngClass]="getStatusBadge(order.status)">{{ getStatusText(order.status) }}</span></p>
+      <p>Tổng đơn hàng: {{ order.totalPrice | currency : "VND" : "symbol" : "1.0-0" }}</p>
+
+      <button class="btn btn-info" (click)="toggleOrderDetails(order.id)">Chi tiết đơn hàng</button>
+
+      <div *ngIf="selectedOrderId === order.id" class="order-details mt-3">
+        <h6>Chi tiết đơn hàng</h6>
+
+        <div *ngFor="let product of order.products">
+          <p>{{ product.productName }} - {{ product.productPrice | currency : "VND" : "symbol" : "1.0-0" }}</p>
+          <button class="btn btn-primary" (click)="selectedProductId = product.productId" *ngIf="order.status === 3">Đánh giá</button>
+        </div>
+
+        <div *ngIf="selectedProductId">
+          <div class="review-section mt-3">
+            <h5>Gửi đánh giá cho sản phẩm</h5>
+            <textarea [(ngModel)]="newReviewContent" placeholder="Nội dung đánh giá" class="review-textarea mb-2"></textarea>
+
+            <div>
+              <label>Đánh giá:</label>
+              <div class="star-rating mb-2">
+                <span *ngFor="let star of [].constructor(5); let i = index"
+                      (click)="newReviewRating = i + 1"
+                      [ngClass]="{'text-warning': i < (newReviewRating ?? 0), 'text-muted': i >= (newReviewRating ?? 0)}">
+                  <i class="fas fa-star"></i>
+                </span>
+              </div>
+            </div>
+            <button class="btn btn-primary" (click)="submitReview(selectedProductId)">Gửi đánh giá</button>
+            <div *ngIf="submissionMessage" class="mt-2">{{ submissionMessage }}</div>
+          </div>
+        </div>
+        <button class="btn btn-secondary" (click)="selectedOrderId = null">Tắt</button>
+      </div>
+    </div>
+  </div>
+
+  <nav aria-label="Page navigation example" *ngIf="filteredOrders.length" class="mt-3">
+    <ul class="pagination justify-content-center">
+      <li class="page-item" [class.disabled]="currentPage === 1">
+        <a class="page-link" href="#" (click)="changePage(currentPage - 1)">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li class="page-item" *ngFor="let page of [].constructor(totalPages); let i = index" [class.active]="currentPage === i + 1">
+        <a class="page-link" href="#" (click)="changePage(i + 1)">{{ i + 1 }}</a>
+      </li>
+      <li class="page-item" [class.disabled]="currentPage === totalPages">
+        <a class="page-link" href="#" (click)="changePage(currentPage + 1)">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>

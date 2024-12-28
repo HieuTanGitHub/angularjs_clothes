@@ -1,0 +1,65 @@
+<div class="container my-5" *ngIf="user">
+  <div class="row">
+    <!-- Sidebar -->
+    <div class="col-md-4 text-center p-0 profile-sidebar">
+      <img
+        src="../../../assets/img/avt.png"
+        class="img-avt mb-3"
+        alt="Avatar"
+      />
+      <p class="fw-bold">{{ user.fullname }}</p>
+      <div class="list-group text-left list-group-flush">
+        <a href="#" class="list-group-item list-group-item-action active">
+          Hồ sơ
+        </a>
+      </div>
+    </div>
+
+    <!-- Profile Information -->
+    <div class="col-md-8 profile-info">
+      <h3 class="text-primary">Hồ sơ của tôi</h3>
+      <p class="text-muted">Quản lý thông tin hồ sơ để bảo mật tài khoản</p>
+      <hr />
+      <div class="mb-3">
+        <label class="fw-bold">Tên đăng nhập:</label>
+        <p class="text-secondary">{{ user.name }}</p>
+      </div>
+      <div class="mb-3">
+        <label class="fw-bold">Tên đầy đủ:</label>
+        <p class="text-secondary">{{ user.fullname }}</p>
+      </div>
+      <div class="mb-3">
+        <label class="fw-bold">Email:</label>
+        <p class="text-secondary">{{ user.email }}</p>
+      </div>
+      <div class="mb-3">
+        <label class="fw-bold">Số điện thoại:</label>
+        <p class="text-secondary">{{ user.phone }}</p>
+      </div>
+      <div class="mb-3">
+        <label class="fw-bold">Giới tính:</label>
+        <p class="text-secondary">
+          {{
+            user.gender === "male"
+              ? "Nam"
+              : user.gender === "female"
+              ? "Nữ"
+              : "Khác"
+          }}
+        </p>
+      </div>
+      <div class="mb-3">
+        <label class="fw-bold">Ngày sinh:</label>
+        <p class="text-secondary">{{ user.dob }}</p>
+      </div>
+
+      <!-- Update Button -->
+      <button
+        class="btn btn-primary mt-3 px-5 py-2 shadow-sm"
+        (click)="navigateToEdit()"
+      >
+        <i class="bi bi-pencil-square"></i> Cập nhật
+      </button>
+    </div>
+  </div>
+</div>

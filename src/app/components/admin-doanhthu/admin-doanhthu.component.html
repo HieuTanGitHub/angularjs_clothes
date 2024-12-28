@@ -1,0 +1,88 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2 bg-light" style="min-height: 100vh">
+      <div class="list-group list-group-flush">
+        <a href="/admin" class="list-group-item list-group-item-action py-3 ">
+          <i class="bi bi-house-door pe-3"></i>
+          Bảng điều khiển
+        </a>
+
+        <a href="/admin-shop" class="list-group-item list-group-item-action py-3">
+          <i class="bi bi-shop pe-3"></i>
+          Quản lý cửa hàng
+        </a>
+        <a
+          href="/product-list"
+          class="list-group-item list-group-item-action py-3"
+        >
+          <i class="bi bi-cart pe-3"></i>
+          Sản phẩm
+        </a>
+        <a
+          href="/category-list"
+          class="list-group-item list-group-item-action py-3"
+        >
+          <i class="bi bi-list pe-3"></i>
+          Danh mục
+        </a>
+        <a
+          href="/admin-order"
+          class="list-group-item list-group-item-action py-3"
+        >
+          <i class="bi bi-bag pe-3"></i>
+          Đơn hàng
+        </a>
+
+        <a href="/account-admin" class="list-group-item list-group-item-action py-3">
+          <i class="bi bi-people pe-3"></i>
+          Người dùng
+        </a>
+        <a
+          href="/admin-doanhthu"
+          class="list-group-item list-group-item-action py-3 active"
+        >
+          <i class="bi bi-bag pe-3"></i>
+          Doanh thu
+        </a>
+      </div>
+    </div>
+
+    <div class="col-md-10 p-0">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="row">
+              <div class="col-md-2 text-center d-flex align-items-center p-0">
+                <i class="bi bi-cart-check-fill fs-1"></i>
+              </div>
+              <div class="col-md-10">
+                <div class="card bg-primary text-white">
+                  <div class="card-header">Tổng số đơn hàng</div>
+                  <div class="card-body">
+                    <p class="card-text">
+                      {{ totalOrders }} <!-- Hiển thị tổng số đơn hàng -->
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3"></div>
+          <div class="col-md-3"></div>
+          <div class="col-md-3"></div>
+        </div>
+
+        <div class="charts d-flex flex-wrap my-3">
+          <div class="chart-container">
+            <h3>Biểu đồ doanh thu các ngày trong tháng</h3>
+            <canvas id="lineChart"></canvas>
+          </div>
+          <div class="chart-container">
+            <h3>Thống kê trạng thái đơn hàng</h3>
+            <canvas id="pieChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

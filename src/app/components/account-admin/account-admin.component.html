@@ -1,0 +1,122 @@
+<div class="d-flex flex-wrap">
+  <div class="col-md-2 bg-light" style="min-height: 100vh">
+    <div class="list-group list-group-flush">
+      <a href="/admin" class="list-group-item list-group-item-action py-3">
+        <i class="bi bi-house-door pe-3"></i>
+        Bảng điều khiển
+      </a>
+      <a href="/admin-shop" class="list-group-item list-group-item-action py-3">
+        <i class="bi bi-shop pe-3"></i>
+        Quản lý cửa hàng
+      </a>
+      <a href="/product-list" class="list-group-item list-group-item-action py-3">
+        <i class="bi bi-cart pe-3"></i>
+        Sản phẩm
+      </a>
+      <a href="/category-list" class="list-group-item list-group-item-action py-3">
+        <i class="bi bi-list pe-3"></i>
+        Danh mục
+      </a>
+      <a href="/admin-order" class="list-group-item list-group-item-action py-3">
+        <i class="bi bi-bag pe-3"></i>
+        Đơn hàng
+      </a>
+      <a href="/account-admin" class="list-group-item list-group-item-action py-3 active">
+        <i class="bi bi-people pe-3"></i>
+        Người dùng
+      </a>
+      <a href="/admin-doanhthu" class="list-group-item list-group-item-action py-3">
+        <i class="bi bi-bag pe-3"></i>
+        Doanh thu
+      </a>
+    </div>
+  </div>
+  <div class="col-md-10 p-4">
+    <h2 class="my-3">Quản lý người dùng</h2>
+    <div class="card bg-primary text-white mb-3">
+      <div class="card-body">
+        <form class="d-flex" (submit)="onSearch($event)">
+          <input
+            name="search"
+            class="form-control me-2"
+            type="search"
+            placeholder="Tìm kiếm"
+            aria-label="Search"
+            [(ngModel)]="searchKeyword"
+          />
+          <button class="btn btn-success" type="submit">
+            <i class="bi bi-search"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>STT</th>
+          <th>Tên người dùng</th>
+          <th>Tên đăng nhập</th>
+          <th class="text-center">Số điện thoại</th>
+          <th>Email</th>
+          <th class="text-center">Trạng thái</th>
+          <th class="text-center">Hành động</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of getPaginatedAccounts(); index as i">
+          <td>{{ (currentPage - 1) * itemsPerPage + i + 1 }}</td>
+          <td>{{ user.fullname }}</td>
+          <td>{{ user.name }}</td>
+          <td class="text-center">{{ user.phone }}</td>
+          <td>{{ user.email }}</td>
+          <td class="text-center">
+            <span *ngIf="user.isBlocked" class="text-danger">Bị chặn</span>
+            <span *ngIf="!user.isBlocked" class="text-success">Hoạt động</span>
+          </td>
+          <td class="text-center">
+            <button
+              *ngIf="!user.isBlocked"
+              class="btn btn-danger"
+              (click)="deleteUser(user.id)"
+            >
+              Chặn
+            </button>
+            <button
+              *ngIf="user.isBlocked"
+              class="btn btn-secondary"
+              (click)="unblockUser(user.id)"
+            >
+              Mở chặn
+            </button>
+          </td>
+        </tr>
+        <tr *ngIf="getPaginatedAccounts().length === 0">
+          <td colspan="6" class="text-center">Không tìm thấy người dùng nào.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <nav aria-label="Page navigation example" *ngIf="totalPages > 1">
+      <ul class="pagination justify-content-center">
+        <li class="page-item" [class.disabled]="currentPage === 1">
+          <a class="page-link" href="#" (click)="changePage(currentPage - 1)">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li
+          class="page-item"
+          *ngFor="let page of [].constructor(totalPages); let i = index"
+          [class.active]="currentPage === i + 1"
+        >
+          <a class="page-link" href="#" (click)="changePage(i + 1)">{{ i + 1 }}</a>
+        </li>
+        <li class="page-item" [class.disabled]="currentPage === totalPages">
+          <a class="page-link" href="#" (click)="changePage(currentPage + 1)">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
