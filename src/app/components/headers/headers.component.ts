@@ -8,7 +8,7 @@ import { CartService } from 'src/app/services/cart.service';
 @Component({
   selector: 'app-headers',
   templateUrl: './headers.component.html',
-  styleUrls: ['./headers.component.css']
+  styleUrls: ['./headers.component.css'],
 })
 export class HeadersComponent implements OnInit {
   isLogin: any;
@@ -30,16 +30,16 @@ export class HeadersComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.cartService.cartQuantity$.subscribe(quantity => {
+    this.cartService.cartQuantity$.subscribe((quantity) => {
       this.cartQnt = quantity; // Cập nhật số lượng sản phẩm
     });
 
     this.categoryService.getAll().subscribe(
-      data => {
+      (data) => {
         this.categories = data as Category[];
         console.log('Danh mục:', this.categories); // Kiểm tra danh mục trả về từ API
       },
-      error => {
+      (error) => {
         console.error('Lỗi khi lấy danh mục:', error);
       }
     );

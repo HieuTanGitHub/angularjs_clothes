@@ -79,7 +79,32 @@
         <div>
           <form (ngSubmit)="onPayment()" #paymentForm="ngForm">
             <!-- Các trường thông tin -->
-            <button type="submit">Thanh toán online</button>
+            <div class="form-group">
+              <label for="amount">Số tiền:</label>
+              <input
+                type="number"
+                id="amount"
+                min="10000"
+                name="amount"
+                [(ngModel)]="amount"
+                class="form-control"
+                placeholder="Nhập số tiền"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="orderDescription">Mô tả:</label>
+              <input
+                type="text"
+                id="orderDescription"
+                name="orderDescription"
+                [(ngModel)]="orderDescription"
+                class="form-control"
+                placeholder="Mô tả đơn hàng"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Thanh toán VNPay</button>
           </form>
 
         </div>

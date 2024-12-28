@@ -43,7 +43,7 @@
       "hinh": "assets/img/10.png"
     }
   ],
-  "danh_muc": [
+  "category": [
     {
       "id": "1",
       "ten": "Giày Sneaker",
@@ -1745,5 +1745,6 @@
       "date": "2024-11-21",
       "image": "https://giaygiare.vn/upload/images/asics-court-ff-2-novak-white-kale.jpg"
     }
-  ]
+  ],
+  "api/create-payment-url": "/create-payment-url"
 }

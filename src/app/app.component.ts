@@ -4,7 +4,7 @@ import { VnpayService } from './services/vnpay.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.less']
+  styleUrls: ['./app.component.less'],
 })
 export class AppComponent {
   constructor(private vnpayService: VnpayService) {}
@@ -15,15 +15,15 @@ export class AppComponent {
       orderDescription: 'Thanh toán đơn hàng',
     };
 
-    this.vnpayService.createPayment(orderInfo).subscribe(
-      (response: any) => {
-        if (response && response.paymentUrl) {
-          window.location.href = response.paymentUrl;
-        }
-      },
-      (error: any) => {
-        console.error('Lỗi khi tạo thanh toán:', error);
-      }
-    );
+    // this.vnpayService.createPayment(orderInfo).subscribe(
+    //   (response: any) => {
+    //     if (response && response.paymentUrl) {
+    //       window.location.href = response.paymentUrl;
+    //     }
+    //   },
+    //   (error: any) => {
+    //     console.error('Lỗi khi tạo thanh toán:', error);
+    //   }
+    // );
   }
 }

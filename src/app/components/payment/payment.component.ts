@@ -10,16 +10,16 @@ export class PaymentComponent {
 
   constructor(private vnpayService: VnpayService) {}
 
-  submitPayment() {
-    this.vnpayService.createPayment(this.orderInfo).subscribe(
-      (response) => {
-        if (response && response.paymentUrl) {
-          window.location.href = response.paymentUrl; // Redirect đến VNPay
-        }
-      },
-      (error) => {
-        console.error('Thanh toán thất bại', error);
-      }
-    );
-  }
+  // submitPayment() {
+  //   this.vnpayService.createPayment(this.orderInfo).subscribe(
+  //     (response) => {
+  //       if (response && response.paymentUrl) {
+  //         window.location.href = response.paymentUrl; // Redirect đến VNPay
+  //       }
+  //     },
+  //     (error) => {
+  //       console.error('Thanh toán thất bại', error);
+  //     }
+  //   );
+  // }
 }

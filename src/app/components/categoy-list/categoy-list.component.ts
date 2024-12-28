@@ -22,7 +22,6 @@ export class CategoyListComponent implements OnInit {
     private router: Router
   ) {}
 
-
   ngOnInit(): void {
     this.loadAccounts();
   }
@@ -39,7 +38,7 @@ export class CategoyListComponent implements OnInit {
       this.filteredCategories = this.categories; // Nếu không có từ khóa tìm kiếm, hiển thị tất cả
     } else {
       const keyword = this.searchKeyword.toLowerCase();
-      this.filteredCategories = this.categories.filter(nha_sx =>
+      this.filteredCategories = this.categories.filter((nha_sx) =>
         nha_sx.ten.toLowerCase().includes(keyword)
       );
     }
@@ -47,7 +46,6 @@ export class CategoyListComponent implements OnInit {
       this.filteredCategories.length / this.itemsPerPage
     ); // Cập nhật tổng số trang
   }
-
 
   getPaginatedCategories(): Category[] {
     const startIndex = (this.currentPage - 1) * this.itemsPerPage;
