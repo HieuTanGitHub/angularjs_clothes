@@ -39,6 +39,7 @@
     "rxjs": "~7.8.0",
     "stream-browserify": "^3.0.0",
     "tslib": "^2.3.0",
+    "vnpay": "^1.6.1",
     "zone.js": "~0.13.0"
   },
   "devDependencies": {

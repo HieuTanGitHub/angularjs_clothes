@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 import { Router } from '@angular/router';
 import { CartService } from 'src/app/services/cart.service';
 import { OrderDetailService } from 'src/app/services/order-detail.service';
@@ -19,47 +24,159 @@ export class CheckoutComponent implements OnInit {
   amount: number = 10000;
   orderDescription: string = '';
   constructor(
+    private fb: FormBuilder,
     private vnpayService: VnpayService,
     private cartService: CartService,
     private router: Router,
     private orderService: OrderService,
     private orderDetailService: OrderDetailService
-  ) {}
+  ) {
+    this.formCheckout = this.fb.group({
+      fullName: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      phone: ['', Validators.required],
+      address: ['', Validators.required],
+      message: [''],
+      paymentMethod: ['', Validators.required],
+      transactionId: [''],
+    });
+  }
 
   ngOnInit(): void {
+    if (!this.userLogged) {
+      this.router.navigate(['/login']);
+      return;
+    } //thêm
     this.totalPrice = this.cartService.handleTotalPrice();
     this.initializeForm();
   }
+  // Hàm tạo ID cho đơn hàng
+  generateOrderId(): string {
+    return 'ORD' + Math.floor(Math.random() * 1000000).toString(); // Tạo ID ngẫu nhiên
+  }
 
+  // private initializeForm() {
+  //   this.formCheckout = new FormGroup({
+  //     fullName: new FormControl(
+  //       this.userLogged?.fullname || '',
+  //       Validators.required
+  //     ),
+  //     phone: new FormControl('', Validators.required),
+  //     email: new FormControl(this.userLogged?.email || '', [
+  //       Validators.required,
+  //       Validators.email,
+  //     ]),
+  //     address: new FormControl('', Validators.required),
+  //     message: new FormControl(''),
+  //     paymentMethod: new FormControl('cash', Validators.required),
+  //     transactionId: new FormControl(''),
+  //   });
+
+  //   this.formCheckout.get('paymentMethod')!.valueChanges.subscribe((method) => {
+  //     if (method === 'bank') {
+  //       this.formCheckout
+  //         .get('transactionId')!
+  //         .setValidators(Validators.required);
+  //     } else {
+  //       this.formCheckout.get('transactionId')!.clearValidators();
+  //     }
+  //     this.formCheckout.get('transactionId')!.updateValueAndValidity();
+  //   });
+  // }
   private initializeForm() {
-    this.formCheckout = new FormGroup({
-      fullName: new FormControl(
-        this.userLogged?.fullname || '',
-        Validators.required
-      ),
-      phone: new FormControl('', Validators.required),
-      email: new FormControl(this.userLogged?.email || '', [
-        Validators.required,
-        Validators.email,
-      ]),
-      address: new FormControl('', Validators.required),
-      message: new FormControl(''),
-      paymentMethod: new FormControl('cash', Validators.required),
-      transactionId: new FormControl(''),
+    //thêm
+    this.formCheckout.patchValue({
+      fullName: this.userLogged?.fullname || '',
+      email: this.userLogged?.email || '',
+      paymentMethod: 'cash', // Giá trị mặc định
     });
 
     this.formCheckout.get('paymentMethod')!.valueChanges.subscribe((method) => {
+      const transactionIdControl = this.formCheckout.get('transactionId')!; //thêm
       if (method === 'bank') {
-        this.formCheckout
-          .get('transactionId')!
-          .setValidators(Validators.required);
+        // this.formCheckout.get('transactionId')!.setValidators(Validators.required);
+        transactionIdControl.setValidators(Validators.required);
       } else {
-        this.formCheckout.get('transactionId')!.clearValidators();
+        // this.formCheckout.get('transactionId')!.clearValidators();
+        transactionIdControl.clearValidators();
       }
-      this.formCheckout.get('transactionId')!.updateValueAndValidity();
+      // this.formCheckout.get('transactionId')!.updateValueAndValidity();
+      transactionIdControl.updateValueAndValidity();
     });
   }
 
+  //   async handleCheckout() {
+  //     if (this.formCheckout.invalid) {
+  //       alert('Vui lòng nhập đúng thông tin');
+  //       return;
+  //     }
+
+  //     const {
+  //       fullName,
+  //       email,
+  //       phone,
+  //       message,
+  //       address,
+  //       paymentMethod,
+  //       transactionId,
+  //     } = this.formCheckout.value;
+
+  //     try {
+  //       // Tạo đơn hàng
+  //       const orderResponse: any = await this.orderService
+  //       .addOrder({
+  //         id: this.generateOrderId(), // Tạo ID cho đơn hàng, nếu bạn có hàm này
+  //         userId: this.userLogged?.id,
+  //         customerName: fullName,
+  //         address,
+  //         phone,
+  //         email,
+  //         totalPrice: this.totalPrice,
+  //         message,
+  //         status: 0, // Trạng thái đơn hàng, có thể là "chưa thanh toán", hoặc "chờ xử lý", v.v.
+  //         createdAt: new Date().toISOString(),
+  //         item: this.cartList.map((cart: any) => cart.ten).join(', '), // Tên các sản phẩm trong đơn hàng
+  //         quantity: this.cartList.reduce((total: number, cart: any) => total + cart.so_luong, 0), // Tổng số lượng sản phẩm trong đơn hàng
+  //         products: this.cartList.map((cart: any) => ({
+  //           productId: cart.id,
+  //           productName: cart.ten, // Tên sản phẩm
+  //           productPrice: cart.gia,
+  //           quantity: cart.so_luong,
+  //         })), // Lưu thông tin sản phẩm vào đơn hàng
+  //       })
+  //       .toPromise();
+  //       //lấy phản hồi từ API
+
+  //     //Lấy id của đơn hàng từ phản hồi
+  //       const orderId = orderResponse.id;
+
+  //       // Thêm chi tiết đơn hàng
+  //       const orderDetailPromises = this.cartList.map((cart: any) => {
+  //         return this.orderDetailService
+  //           .add({
+  //             orderId: orderId,
+  //             productId: cart.id,
+  //             productName: cart.ten, // Thêm tên sản phẩm vào chi tiết đơn hàng
+  //             productPrice: cart.gia,
+  //             quantity: cart.so_luong,
+  //           })
+  //           .toPromise();
+  //       });
+
+  //     await Promise.all(orderDetailPromises);
+
+  //     // Kiểm tra phương thức thanh toán và điều hướng
+  //     if (paymentMethod === 'bank') {
+  //       this.processBankTransfer(transactionId);
+  //     } else {
+  //       alert('Đặt hàng thành công');
+  //       this.finishOrder();
+  //     }
+  //   } catch (error) {
+  //     console.error('Đã xảy ra lỗi: ', error);
+  //     alert('Có lỗi xảy ra, vui lòng thử lại.');
+  //   }
+  // }
   async handleCheckout() {
     if (this.formCheckout.invalid) {
       alert('Vui lòng nhập đúng thông tin');
@@ -76,37 +193,46 @@ export class CheckoutComponent implements OnInit {
       transactionId,
     } = this.formCheckout.value;
 
+    const orderData = {
+      id: this.generateOrderId(),
+      userId: this.userLogged?.id,
+      customerName: fullName,
+      address,
+      phone,
+      email,
+      totalPrice: this.totalPrice,
+      message,
+      status: 0,
+      createdAt: new Date().toISOString(),
+      item: this.cartList.map((cart: any) => cart.ten).join(', '),
+      quantity: this.cartList.reduce(
+        (total: number, cart: any) => total + cart.so_luong,
+        0
+      ),
+      products: this.cartList.map((cart: any) => ({
+        productId: cart.id,
+        productName: cart.ten,
+        productPrice: cart.gia,
+        quantity: cart.so_luong,
+      })),
+    };
+
+    // console.log('Order data being sent:', orderData);  // theo dõi dữ liệu gửi đến máy chủ
+
     try {
-      // Tạo đơn hàng
       const orderResponse: any = await this.orderService
-        .addOrder({
-          userId: this.userLogged?.id,
-          customerName: fullName,
-          address,
-          phone,
-          email,
-          totalPrice: this.totalPrice,
-          message,
-          status: 0,
-          createdAt: new Date().toISOString(),
-          products: this.cartList.map((cart: any) => ({
-            productId: cart.id,
-            productName: cart.ten, // Thêm tên sản phẩm
-            productPrice: cart.gia,
-            quantity: cart.so_luong,
-          })), // Lưu thông tin sản phẩm vào đơn hàng
-        })
+        .addOrder(orderData)
         .toPromise();
+      console.log('Order response:', orderResponse); // gỡ lỗi để kiểm tra phản hồi của máy chủ
 
       const orderId = orderResponse.id;
 
-      // Thêm chi tiết đơn hàng
       const orderDetailPromises = this.cartList.map((cart: any) => {
         return this.orderDetailService
           .add({
             orderId: orderId,
             productId: cart.id,
-            productName: cart.ten, // Thêm tên sản phẩm vào chi tiết đơn hàng
+            productName: cart.ten,
             productPrice: cart.gia,
             quantity: cart.so_luong,
           })
@@ -115,7 +241,6 @@ export class CheckoutComponent implements OnInit {
 
       await Promise.all(orderDetailPromises);
 
-      // Kiểm tra phương thức thanh toán và điều hướng
       if (paymentMethod === 'bank') {
         this.processBankTransfer(transactionId);
       } else {
@@ -142,18 +267,18 @@ export class CheckoutComponent implements OnInit {
   onPayment() {
     const orderInfo = {
       amount: 500000, // Example amount
-      orderDescription: 'Paymentforgoods',
-      txnRef: 'ssdesad', // Unique transaction reference
+      orderDescription: 'Thanh toán mua giày',
+      txnRef: 'hieutan', // Unique transaction reference
     };
 
     // Generate payment URL
     const paymentUrl = this.vnpayService.generatePaymentUrl(orderInfo);
     console.log('Generated Payment URL:', paymentUrl);
     //Redirect user to VNPay payment page
-    // if (paymentUrl) {
-    //   window.location.href = paymentUrl;
-    // } else {
-    //   console.error('Error generating payment URL.');
-    // }
+    if (paymentUrl) {
+      window.location.href = paymentUrl;
+    } else {
+      console.error('Error generating payment URL.');
+    }
   }
 }
